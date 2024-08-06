@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={JetBrainsMono.variable}>
         <Header />
         <StairTransition />
-        <PageTransition> {children}</PageTransition>
+        <PageTransition> {/* {children} */}</PageTransition>
         {children}
       </body>
     </html>
