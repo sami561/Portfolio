@@ -42,7 +42,7 @@ const about = {
 };
 const experiences = {
   icon: "",
-  title: "My experiences",
+  title: "My Experiences",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi vero quod molestiae culpa sunt, nihil corporis deleniti ex quibusdam. ",
   items: [
@@ -149,7 +149,27 @@ const Resume = () => {
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
-      Resume page
+      <div className="container mx-auto">
+        <Tabs
+          defaultValue="experiences"
+          className="flex flex-col xl:flex-row  gap-[60px]"
+        >
+          <TabsList className="flex flex-col w-full  max-w-[380px]mx-auto xl:mx-0 gap-6 ">
+            <TabsTrigger value="experiences"> Experiences</TabsTrigger>
+            <TabsTrigger value="education"> Education</TabsTrigger>
+            <TabsTrigger value="skills"> Skills</TabsTrigger>
+            <TabsTrigger value="about"> About me</TabsTrigger>
+          </TabsList>
+          <div className="min-h-[70vh] w-full">
+            <TabsContent value="experiences" className="w-full">
+              {" "}
+            </TabsContent>
+            <TabsContent></TabsContent>
+            <TabsContent></TabsContent>
+            <TabsContent></TabsContent>
+          </div>
+        </Tabs>
+      </div>
     </motion.div>
   );
 };
