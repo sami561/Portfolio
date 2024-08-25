@@ -44,27 +44,27 @@ const experiences = {
   icon: "",
   title: "My Experiences",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi vero quod molestiae culpa sunt, nihil corporis deleniti ex quibusdam. ",
+    "Full Stack Developer and Software Engineer with 1+ years of experience in building responsive applications and robust backend systems. Skilled in delivering high-quality code and collaborating with cross-functional teams to create scalable, user-friendly software solutions. ",
   items: [
     {
-      company: "arsela",
-      position: "Full  Stack Developer",
-      duration: "2024-present",
+      company: "Arsela Technologies",
+      position: "Full-Time Full-Stack Developer",
+      duration: "February 2024 - Present",
     },
     {
-      company: "arsela",
-      position: "Full  Stack Intern",
-      duration: "2024-present",
+      company: "Arsela Technologies",
+      position: "Summer Intern",
+      duration: "June 2023 - August 2023",
     },
     {
-      company: "ReactIt",
-      position: "Front-End  Developer Intern",
-      duration: "Summer 2023",
+      company: "Reactit",
+      position: "End-of-Study Project Intern",
+      duration: "February 2022 - June 2022",
     },
     {
       company: "pixillum",
-      position: "Front-End  Developer Intern",
-      duration: "2022-2023",
+      position: "Summer Intern",
+      duration: "August 2021-September 2021",
     },
   ],
 };
@@ -72,22 +72,22 @@ const education = {
   icon: "",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi vero quod molestiae culpa sunt, nihil corporis deleniti ex quibusdam. ",
+    "I hold a Bachelor's degree in Computer Science and Multimedia, followed by a Master's in Web Services and Multimedia, alongside Software Engineering. This academic journey has equipped me with a strong foundation in both technical and creative problem-solving.",
   items: [
     {
-      institution: "epi ",
-      degree: "Full  Stack Developer",
+      institution: "EPI DIGITAL SCHOOL",
+      degree: "Engineering Degree ",
+      duration: "Sept 2023 - June 2025",
+    },
+    {
+      institution: "ISITCOM",
+      degree: "Master Degree in Web services ",
       duration: "2024-present",
     },
     {
-      institution: "isitcom",
-      degree: "Full  Stack Intern",
-      duration: "2024-present",
-    },
-    {
-      institution: "isitcom",
-      degree: "Full  Stack Intern",
-      duration: "2024-present",
+      institution: "ISITCOM",
+      degree: "Bachelor’s Degree in Computer Science",
+      duration: "Sept 2019 - July 2022",
     },
   ],
 };

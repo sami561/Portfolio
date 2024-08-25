@@ -16,20 +16,37 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Design and Development of a Loan Application System:",
     title: "project 01",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    stack: [{ name: "Html 5" }, { name: "Css3" }, { name: "Javascript" }],
+    description:
+      "I developed a loan request process using Spring Boot for the backend with Spring Security for authentication and authorization. On the frontend, I implemented reusable components and a responsive design compatible with various screen types. I also created an endpoint in Django for loan simulation calculations and used Redux Toolkit for state management and reporting. The entire application was containerized with Docker, and I set up a CI pipeline with Jenkins to automate builds for both backend and frontend, pushing the images to Docker Hub.",
+    stack: [
+      { name: "react js" },
+      { name: "SpringBoot" },
+      { name: "Javascript" },
+      { name: "Django" },
+      { name: "Redux Toolkit" },
+      { name: "Docker" },
+      { name: "Jenkins" },
+    ],
     image: "/assets/mediamodifier_image (1).png",
     live: "",
     github: "",
   },
   {
     num: "02",
-    category: "frontend",
+    category: "Development of an Online Learning Platform:",
     title: "project 02",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    stack: [{ name: "Html 5" }, { name: "Css3" }, { name: "Javascript" }],
+    description:
+      " I developed an online learning platform that includes features for managing teachers and students, as well as creating and managing classrooms. The backend was built using Laravel, the frontend with Angular, and it was connected to an SQL database. ",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css3" },
+      { name: "TypeScript" },
+      { name: "Laravel" },
+      { name: "Angular" },
+      { name: "SQL" },
+    ],
     image: "/assets/mediamodifier_image (6).png",
     live: "",
     github: "",
@@ -71,7 +88,7 @@ const Work = () => {
                 {project.category} project{" "}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul>
+              <ul className="flex-1">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
