@@ -15,10 +15,10 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent"> Sami Ayachi</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Aspiring Software Engineer and Full Stack JavaScript Developer . I
-              am seeking a better opportunity for my end-of-study project,
-              aiming to work on a creative and impactful project that aligns
-              with my career goals.
+              Aspiring Software Engineer and Full Stack JavaScript Developer
+              with 1+ years of experience. I am seeking a better opportunity for
+              my end-of-study project, aiming to work on a creative and
+              impactful project that aligns with my career goals.
             </p>
             <div className="flex  flex-row  gap-5  justify-center align-middle">
               <Button
