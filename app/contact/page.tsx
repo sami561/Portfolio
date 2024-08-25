@@ -35,10 +35,8 @@ const Contact = () => {
             >
               <h3 className="text-4xl text-accent">Lets Work together</h3>
               <p className=" text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ex
-                recusandae reiciendis consequuntur maxime quaerat ipsa nobis
-                sequi tempora est. Atque eveniet necessitatibus iste explicabo
-                adipisci illum cumque sunt nam!
+                If you'd like to collaborate or discuss any opportunities, feel
+                free to contact me. I'm always open to new ideas and projects!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstName" placeholder="Firstname" />
@@ -67,7 +65,7 @@ const Contact = () => {
             </form>
           </div>
           <div className="flex-1 flex  items-center xl justify-end oder-1 xl:order-none mb-8 xl:mb-2">
-            <ul>
+            <ul className="flex flex-col gap-10 ">
               {info.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center gap-6">

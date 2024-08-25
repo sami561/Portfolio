@@ -20,7 +20,7 @@ const Photo = () => {
           className="w-[298px] h-[294px] xl:w-[498px] xl:h-[498px] mix-blend-lighten rounded-full absolute"
         >
           <Image
-            src="/assets/photo-modified.png"
+            src="/assets/image.png"
             alt="test"
             priority
             quality={100}
@@ -39,7 +39,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
+            stroke="#4682B4"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

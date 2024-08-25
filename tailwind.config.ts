@@ -31,8 +31,8 @@ const config = {
       colors: {
         primary: "#1c1c22",
         accent: {
-          DEFAULT: "#00FF99",
-          hover: "#00E187"
+          DEFAULT: "#4682B4",  // Steel Blue
+          hover: "#5A9BD3"
         }
       },
       borderRadius: {

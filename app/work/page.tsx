@@ -16,26 +16,26 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Design and Development of a Loan Application System:",
+    category: "Design and Development of a Loan Application System",
     title: "project 01",
     description:
-      "I developed a loan request process using Spring Boot for the backend with Spring Security for authentication and authorization. On the frontend, I implemented reusable components and a responsive design compatible with various screen types. I also created an endpoint in Django for loan simulation calculations and used Redux Toolkit for state management and reporting. The entire application was containerized with Docker, and I set up a CI pipeline with Jenkins to automate builds for both backend and frontend, pushing the images to Docker Hub.",
+      "I developed a loan request application with Spring Boot, React, and Django, using Spring Security, Redux Toolkit, Docker, and Jenkins for CI/CD.",
     stack: [
-      { name: "react js" },
+      { name: "reactJs" },
       { name: "SpringBoot" },
       { name: "Javascript" },
       { name: "Django" },
-      { name: "Redux Toolkit" },
+      { name: "ReduxToolkit" },
       { name: "Docker" },
       { name: "Jenkins" },
     ],
-    image: "/assets/mediamodifier_image (1).png",
+    image: "/assets/Project01/dashboard interface.png",
     live: "",
-    github: "",
+    github: "https://github.com/sami561/Loan-Application-Repo",
   },
   {
     num: "02",
-    category: "Development of an Online Learning Platform:",
+    category: "Development of an Online Learning Platform",
     title: "project 02",
     description:
       " I developed an online learning platform that includes features for managing teachers and students, as well as creating and managing classrooms. The backend was built using Laravel, the frontend with Angular, and it was connected to an SQL database. ",
@@ -47,7 +47,7 @@ const projects = [
       { name: "Angular" },
       { name: "SQL" },
     ],
-    image: "/assets/mediamodifier_image (6).png",
+    image: "/assets/Project01/dashboardLight.png",
     live: "",
     github: "",
   },
@@ -85,10 +85,10 @@ const Work = () => {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white groupe-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project{" "}
+                {project.category}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex-1">
+              <ul className="flex flex-row items-start w-[50%]">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
@@ -143,7 +143,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          /*    className="object-cover" */
                           alt="project image"
                         />
                       </div>
