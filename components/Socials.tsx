@@ -1,21 +1,31 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { animate, motion } from "framer-motion";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Link from "next/link";
-const socails = [
+import { ReactNode } from "react";
+
+interface SocialItem {
+  icon: ReactNode;
+  path: string;
+}
+
+interface SocialsProps {
+  containerStyles: string;
+  iconStyles: string;
+}
+
+const socails: SocialItem[] = [
   { icon: <FaGithub />, path: "https://github.com/sami561" },
   { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/sami-ayachi/" },
 ];
-const Socials = ({ containerStyles, iconStyles }) => {
+
+const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-      {socails.map((item, index) => {
-        return (
-          <Link key={index} href={item.path} className={iconStyles}>
-            {item.icon}
-          </Link>
-        );
-      })}
+      {socails.map((item, index) => (
+        <Link key={index} href={item.path} className={iconStyles}>
+          {item.icon}
+        </Link>
+      ))}
     </div>
   );
 };
