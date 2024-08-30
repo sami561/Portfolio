@@ -6,18 +6,18 @@ const links = [
     name: "home",
     path: "/",
   },
-  {
+  /*   {
     name: "services",
     path: "/services",
-  },
+  }, */
   {
     name: "resume",
     path: "/resume",
   },
-  {
+  /*   {
     name: "Work",
     path: "/work",
-  },
+  }, */
   {
     name: "contact",
     path: "/contact",
@@ -25,7 +25,6 @@ const links = [
 ];
 const Nav = () => {
   const pathname = usePathname();
-  console.log("🚀 ~ Nav ~ pathname:", pathname);
 
   return (
     <nav className="flex gap-8">
