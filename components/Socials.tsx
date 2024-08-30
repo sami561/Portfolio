@@ -22,7 +22,12 @@ const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socails.map((item, index) => (
-        <Link key={index} href={item.path} className={iconStyles}>
+        <Link
+          key={index}
+          href={item.path}
+          className={iconStyles}
+          target="_blank"
+        >
           {item.icon}
         </Link>
       ))}

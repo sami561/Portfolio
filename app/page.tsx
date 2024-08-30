@@ -21,14 +21,20 @@ const Home = () => {
               impactful project that aligns with my career goals.
             </p>
             <div className="flex  flex-row  gap-5  justify-center align-middle">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <a
+                href="https://drive.google.com/file/d/1RjI8Yhb6F_3zFgbv3Zs3ulnDTEWnfvVf/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span>Download CV </span>
-                <FiDownload className="text-xl" />
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="flex align-middle xl:mb-0  mt-2">
                 <Socials
                   containerStyles="flex gap-6"
