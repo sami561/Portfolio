@@ -22,7 +22,7 @@ const Home = () => {
             </p>
             <div className="flex  flex-row  gap-5  justify-center align-middle">
               <a
-                href="https://drive.google.com/file/d/1RjI8Yhb6F_3zFgbv3Zs3ulnDTEWnfvVf/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Egik-vTOVytQMn2ixEm9hQgUEDLvHMbK/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
