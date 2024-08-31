@@ -16,49 +16,40 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Design and Development of a Loan Application System",
+    category: "e-Citoyen is an e-government project",
     title: "project 01",
     description:
-      "I developed a loan request application with Spring Boot, React, and Django, using Spring Security, Redux Toolkit, Docker, and Jenkins for CI/CD.",
+      "As a Full Stack JavaScript Developer, I'm part of the development team for the e-Citoyen project, an e-government initiative that streamlines municipal services and makes it easier for citizens to manage their needs online.",
     stack: [
-      { name: "reactJs" },
-      { name: "SpringBoot" },
-      { name: "Javascript" },
-      { name: "Django" },
-      { name: "ReduxToolkit" },
-      { name: "Docker" },
-      { name: "Jenkins" },
+      { name: "Redux" },
+      { name: "ReduxSaga" },
+      { name: "Next.js" },
+      { name: "React.js" },
+      { name: "Express" },
+      { name: "MongoDB" },
+      { name: "Redis" },
     ],
-    image: "/assets/Project01/dashboard interface.png",
-    live: "",
-    github: "https://github.com/sami561/Loan-Application-Repo",
-  },
-  {
-    num: "02",
-    category: "Development of an Online Learning Platform",
-    title: "project 02",
-    description:
-      " I developed an online learning platform that includes features for managing teachers and students, as well as creating and managing classrooms. The backend was built using Laravel, the frontend with Angular, and it was connected to an SQL database. ",
-    stack: [
-      { name: "Html 5" },
-      { name: "Css3" },
-      { name: "TypeScript" },
-      { name: "Laravel" },
-      { name: "Angular" },
-      { name: "SQL" },
-    ],
-    image: "/assets/Project01/dashboardLight.png",
-    live: "",
+    image: "/assets/Project01/e-citoyen.png",
+    live: "https://e-citoyen.tn/",
     github: "",
   },
   {
-    num: "03",
-    category: "frontend",
-    title: "project 03",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    stack: [{ name: "Html 5" }, { name: "Css3" }, { name: "Javascript" }],
-    image: "/assets/photo-modified.png",
-    live: "",
+    num: "02",
+    category: "WIDE: A Fintech Solution for Simplifying Loans and Home Buying",
+    title: "project 02",
+    description:
+      "As a Frontend Developer, I contribute to the WIDE project, a fintech solution that simplifies the process of securing loans and purchasing homes by creating intuitive, user-friendly interfaces that enhance the overall user experience. ",
+    stack: [
+      { name: "ReactJS" },
+      { name: "Django" },
+      { name: "Next.js" },
+      { name: "ApexCharts" },
+      { name: "NumPy" },
+      { name: "Git" },
+      { name: "GitLab" },
+    ],
+    image: "/assets/Project02/wide.png",
+    live: "http://appflow.wide.tn:3001/",
     github: "",
   },
 ];
@@ -112,7 +103,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                {/*   <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
@@ -123,7 +114,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

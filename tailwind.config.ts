@@ -1,4 +1,20 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+const addVariablesForColors = ({ addBase, theme }: any) => {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+};
 
 const config = {
   darkMode: ["class"],
@@ -8,7 +24,7 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
     './app/services/page.jsx',
-    "./app/resume/page.tsx"
+    "./app/resume/page.tsx",
   ],
   prefix: "",
   theme: {
@@ -20,20 +36,21 @@ const config = {
       sm: "640px",
       md: "768px",
       lg: "960px",
-      xl: '1200px'
-
+      xl: '1200px',
+      ...defaultTheme.screens, // Merging with the default theme screens if needed
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)"
+      primary: "var(--font-jetbrainsMono)",
+      ...defaultTheme.fontFamily, // Merging with the default theme fonts if needed
     },
-
     extend: {
       colors: {
         primary: "#1c1c22",
         accent: {
           DEFAULT: "#4682B4",  // Steel Blue
-          hover: "#5A9BD3"
-        }
+          hover: "#5A9BD3",
+        },
+        ...colors, // Merging with the default tailwind colors
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -56,7 +73,10 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+  ],
+} satisfies Config;
 
-export default config
+export default config;

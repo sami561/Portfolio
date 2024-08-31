@@ -7,8 +7,27 @@ import {
   FaReact,
   FaNodeJs,
   FaFigma,
+  FaPython,
+  FaAngular,
+  FaJava,
+  FaGitAlt,
+  FaDocker,
+  FaAndroid,
+  FaSwift,
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiDjango,
+  SiPostgresql,
+  SiMongodb,
+  SiJenkins,
+  SiAzuredevops,
+  SiExpress,
+  SiReact,
+  SiNextdotjs,
+  SiJavascript,
+  SiAngular,
+} from "react-icons/si";
 const about = {
   title: "About me",
   description:
@@ -128,6 +147,59 @@ const skills = {
       name: "Figma",
       icon: <FaFigma />,
     },
+    {
+      name: "Python (Django)",
+      icon: <FaPython />,
+    },
+    {
+      name: "Angular",
+      icon: <FaAngular />,
+    },
+    {
+      name: "ReactJS",
+      icon: <FaReact />,
+    },
+
+    {
+      name: "NodeJS",
+      icon: <FaNodeJs />,
+    },
+    {
+      name: "ExpressJs",
+      icon: <SiExpress />,
+    },
+    {
+      name: "Java (Spring Boot)",
+      icon: <FaJava />,
+    },
+    {
+      name: "SQL (PostgreSQL)",
+      icon: <SiPostgresql />,
+    },
+    {
+      name: "NoSQL (MongoDB)",
+      icon: <SiMongodb />,
+    },
+    {
+      name: "Git",
+      icon: <FaGitAlt />,
+    },
+    {
+      name: "DevOps (Docker, Azure, Jenkins)",
+      icon: <FaDocker />, // For Docker
+    },
+    {
+      name: "Swift",
+      icon: <FaSwift />,
+    },
+    {
+      name: "Android",
+      icon: <FaAndroid />,
+    },
+    {
+      name: "React Native",
+      icon: <FaReact />,
+    },
   ],
 };
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -139,6 +211,7 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 const Resume = () => {
   return (
     <motion.div
@@ -154,7 +227,7 @@ const Resume = () => {
           defaultValue="experiences"
           className="flex flex-col xl:flex-row  gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full  max-w-[380px]mx-auto xl:mx-0 gap-6 ">
+          <TabsList className="flex flex-col w-full  max-w-[380px] mx-auto xl:mx-0 gap-6 ">
             <TabsTrigger value="experiences"> Experiences</TabsTrigger>
             <TabsTrigger value="education"> Education</TabsTrigger>
             <TabsTrigger value="skills"> Skills</TabsTrigger>
@@ -164,7 +237,7 @@ const Resume = () => {
             <TabsContent value="experiences" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold ">{experiences.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto  xl:mx-0  ">
+                <p className=" text-white/60 mx-auto  xl:mx-0  ">
                   {experiences.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -191,7 +264,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold ">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto  xl:mx-0  ">
+                <p className=" text-white/60 mx-auto  xl:mx-0  ">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -219,7 +292,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold ">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto  xl:mx-0 ">
+                  <p className=" text-white/60 mx-auto  xl:mx-0 ">
                     {skills.description}
                   </p>
                 </div>
@@ -249,9 +322,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] mx-auto xl:mx-0 ">
-                  {about.description}
-                </p>
+                <p className="mx-auto xl:mx-0 ">{about.description}</p>
                 <ul className="grid  grd-col-1 xl:grid-col-2 gap-y-6 max-w-[620px]  mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (

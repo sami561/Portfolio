@@ -4,11 +4,12 @@ import "./globals.css";
 import Header from "@/components/header";
 import PageTransition from "@/components/pageTransition";
 import StairTransition from "@/components/StairTransition";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono ",
+  variable: "--font-jetbrainsMono",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +25,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={JetBrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition> {/* {children} */}</PageTransition>
-        {children}
+        {/* Background Beams */}
+        <BackgroundBeams className="absolute inset-0 z-0 pointer-events-none" />
+
+        {/* Main Content */}
+        <div className="relative z-10">
+          <Header />
+          <StairTransition />
+          <PageTransition>{""}</PageTransition>
+          {children}
+        </div>
       </body>
     </html>
   );
