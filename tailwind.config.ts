@@ -50,6 +50,7 @@ const config = {
           DEFAULT: "#4682B4",  // Steel Blue
           hover: "#5A9BD3",
         },
+        tertiary: "#151030",
         ...colors, // Merging with the default tailwind colors
       },
       borderRadius: {

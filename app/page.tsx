@@ -1,6 +1,7 @@
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
+import { ModalTrigger } from "@/components/ui/animated-modal";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
@@ -42,6 +43,7 @@ const Home = () => {
                     <FiDownload className="text-xl" />
                   </Button>
                 </a>
+
                 <div className="flex align-middle xl:mb-0 mt-2">
                   <Socials
                     containerStyles="flex gap-6"

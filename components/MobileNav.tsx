@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
+import path from "path";
 const links = [
   {
     name: "home",
@@ -20,6 +21,10 @@ const links = [
   {
     name: "Work projects",
     path: "/work",
+  },
+  {
+    name: "PersonalProject",
+    path: "/PersonalProject",
   },
   {
     name: "contact",
