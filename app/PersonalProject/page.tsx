@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../../lib/motion";
 import Image from "next/image";
+import { LampContainer } from "@/components/ui/lamp";
 
 type Project = {
   name: string;

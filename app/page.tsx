@@ -1,3 +1,4 @@
+"use client";
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
@@ -6,10 +7,11 @@ import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import React from "react";
+import React, { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
+  const [isHovered, setIsHovered] = useState(false);
   const words = `Aspiring Software Engineer and Full Stack JavaScript Developer
                 with 1+ years of experience.`;
   const word = ["Software Engineer ", "Full Stack JavaScript Developer"];
@@ -37,10 +39,18 @@ const Home = () => {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="uppercase flex items-center gap-2"
+                    className="uppercase flex items-center gap-2 w-[16rem] h-12"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                   >
-                    <span>Download CV</span>
-                    <FiDownload className="text-xl" />
+                    {isHovered ? (
+                      <FiDownload className="text-xl" />
+                    ) : (
+                      <span className="uppercase flex items-center gap-2">
+                        <span>Download CV</span>
+                        <FiDownload className="text-xl" />
+                      </span>
+                    )}
                   </Button>
                 </a>
 
