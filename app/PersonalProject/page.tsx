@@ -17,28 +17,31 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: "Car Rent",
+    name: "Loan Application System",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A loan request application developed with Spring Boot for backend services, implementing Spring Security for authentication and authorization. The frontend was built using reusable components and responsive design. Loan simulations were handled via a Django API, with Redux Toolkit managing the state and reporting. The entire system was containerized using Docker, with a CI pipeline set up in Jenkins for automated builds, and images were pushed to Docker Hub.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "mongodb", color: "green-text-gradient" },
-      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "Spring Boot", color: "blue-text-gradient" },
+      { name: "Django", color: "green-text-gradient" },
+      { name: "Redux Toolkit", color: "pink-text-gradient" },
+      { name: "Docker", color: "green-text-gradient" },
+      { name: "Jenkins", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
     ],
-    image: "/assets/carrent.png",
-    source_code_link: "https://github.com/",
+    image: "/assets/Project01/dashboardLight.png",
+    source_code_link: "https://github.com/your-repo/Loan-Application-Repo",
   },
   {
-    name: "Job IT",
+    name: "Online Learning Platform",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An online learning platform with features for managing teachers, students, and classrooms. The backend was developed using Laravel, and the frontend with Angular. The platform is connected to an SQL database for data management.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "restapi", color: "green-text-gradient" },
-      { name: "scss", color: "pink-text-gradient" },
+      { name: "Laravel", color: "blue-text-gradient" },
+      { name: "Angular", color: "red-text-gradient" },
+      { name: "SQL", color: "green-text-gradient" },
     ],
-    image: "/assets/jobit.png",
-    source_code_link: "https://github.com/",
+    image: "/assets/Project01/add.png",
+    source_code_link: "//github.com/sami561/e-learning-website.git",
   },
   {
     name: "Trip Guide",
