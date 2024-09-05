@@ -30,7 +30,7 @@ const projects: Project[] = [
       { name: "react", color: "green-text-gradient" },
     ],
     image: "/assets/Project01/dashboardLight.png",
-    source_code_link: "https://github.com/your-repo/Loan-Application-Repo",
+    source_code_link: "https://github.com/sami561/Loan-Application-Repo",
   },
   {
     name: "Online Learning Platform",
@@ -54,7 +54,7 @@ const projects: Project[] = [
       { name: "css", color: "pink-text-gradient" },
     ],
     image: "/assets/tripguide.png",
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/sami561",
   },
 ];
 
