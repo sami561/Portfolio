@@ -20,7 +20,7 @@ const projects: Project[] = [
   {
     name: "Loan Application System",
     description:
-      "A loan request application developed with Spring Boot for backend services, implementing Spring Security for authentication and authorization. The frontend was built using reusable components and responsive design. Loan simulations were handled via a Django API, with Redux Toolkit managing the state and reporting. The entire system was containerized using Docker, with a CI pipeline set up in Jenkins for automated builds, and images were pushed to Docker Hub.",
+      "A loan request application developed with Spring Boot for backend services, implementing Spring Security for authentication and authorization. The frontend was built using reusable components and responsive design. ",
     tags: [
       { name: "Spring Boot", color: "blue-text-gradient" },
       { name: "Django", color: "green-text-gradient" },
