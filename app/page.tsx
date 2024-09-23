@@ -9,6 +9,10 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import React, { useState } from "react";
 import { FiDownload } from "react-icons/fi";
+import Contact from "./contact/page";
+import Resume from "./resume/page";
+import PersonalProject from "./PersonalProject/page";
+import Work from "./work/page";
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -67,7 +71,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <Stats /> */}
+        <Stats />
+        <Resume />
+        <PersonalProject />
+        <Work />
+        <Contact />
       </section>
     </>
   );

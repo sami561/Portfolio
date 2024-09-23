@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import PageTransition from "@/components/pageTransition";
 import StairTransition from "@/components/StairTransition";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
+import { Contact } from "lucide-react";
 
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
