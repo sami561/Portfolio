@@ -45,11 +45,15 @@ const config = {
     },
     extend: {
       colors: {
-        primary: "#1c1c22",
+        primary: "var(--primary)",
+        "text-color": "var(--text-color)",
+        background: "var(--primary)",
+        foreground: "var(--text-color)",
         accent: {
-          DEFAULT: "#4682B4",  // Steel Blue
-          hover: "#5A9BD3",
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
         },
+        secondary: "var(--secondary)",
         tertiary: "#151030",
         ...colors, // Merging with the default tailwind colors
       },

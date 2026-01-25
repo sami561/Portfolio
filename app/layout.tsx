@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import PageTransition from "@/components/pageTransition";
 import StairTransition from "@/components/StairTransition";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -23,18 +24,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={JetBrainsMono.variable}>
-        {/* Background Beams */}
-        <BackgroundBeams className="absolute inset-0 z-0 pointer-events-none" />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* Background Beams */}
+          <BackgroundBeams className="absolute inset-0 z-0 pointer-events-none" />
 
-        {/* Main Content */}
-        <div className="relative z-10">
-          <Header />
-          <StairTransition />
-          <PageTransition>{""}</PageTransition>
-          {children}
-        </div>
+          {/* Main Content */}
+          <div className="relative z-10">
+            <Header />
+            <StairTransition />
+            <PageTransition>{""}</PageTransition>
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 const links = [
   {
     name: "home",
-    path: "/",
+    path: "/#home",
   },
   /*   {
     name: "services",
@@ -12,19 +12,19 @@ const links = [
   }, */
   {
     name: "resume",
-    path: "/resume",
+    path: "/#resume",
   },
   {
     name: "Work projects",
-    path: "/work",
+    path: "/#work",
   },
   {
     name: "Personal project",
-    path: "/PersonalProject",
+    path: "/#personal-project",
   },
   {
     name: "contact",
-    path: "/contact",
+    path: "/#contact",
   },
 ];
 const Nav = () => {
@@ -36,9 +36,8 @@ const Nav = () => {
         <Link
           key={index}
           href={link.path}
-          className={`${
-            link.path === pathname && "text-accent border-b-2 border-accent"
-          } capitalize font-medium hover:text-accent transition-all  `}
+          className={`${link.path === pathname && "text-accent border-b-2 border-accent"
+            } capitalize font-medium hover:text-accent transition-all  `}
         >
           {link.name}
         </Link>

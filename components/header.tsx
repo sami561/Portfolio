@@ -5,12 +5,13 @@ import Nav from "./Nav";
 import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
 import { AiFillPhone } from "react-icons/ai";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Header = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-8 xl:py-12 ">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <h1 className="text-4xl font-semibold">
@@ -20,7 +21,7 @@ const Header = () => {
         {/* Desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="/contact">
+          <Link href="/#contact">
             <Button
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
@@ -29,6 +30,7 @@ const Header = () => {
               Contact Me
             </Button>
           </Link>
+          <ThemeToggle />
         </div>
         {/* Mobile nav */}
         <div className="xl:hidden">

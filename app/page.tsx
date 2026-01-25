@@ -2,6 +2,10 @@
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
+import Resume from "@/components/Resume";
+import Work from "@/components/Work";
+import PersonalProject from "@/components/PersonalProject";
+import Contact from "@/components/Contact";
 import { ModalTrigger } from "@/components/ui/animated-modal";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import { Button } from "@/components/ui/button";
@@ -18,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <section className=" h-full">
+      <section id="home" className="h-full mb-12 xl:mb-24">
         <div className="container mx-auto h-full relative z-10">
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             <div className="text-center xl:text-left order-2 xl:order-none">
@@ -68,6 +72,28 @@ const Home = () => {
           </div>
         </div>
         {/* <Stats /> */}
+      </section>
+
+      <section id="resume" className="mb-12 xl:mb-24">
+        <Resume />
+      </section>
+
+      <section id="work" className="mb-12 xl:mb-24">
+        <div className="container mx-auto mb-8">
+          <h2 className="h2 text-center xl:text-left text-primary">Work Projects</h2>
+        </div>
+        <Work />
+      </section>
+
+      <section id="personal-project" className="mb-12 xl:mb-24">
+        <div className="container mx-auto mb-8">
+          <h2 className="h2 text-center xl:text-left text-primary">Personal Projects</h2>
+        </div>
+        <PersonalProject />
+      </section>
+
+      <section id="contact" className="mb-12 xl:mb-24">
+        <Contact />
       </section>
     </>
   );
