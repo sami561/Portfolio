@@ -1,0 +1,153 @@
+{
+    "HomePage": {
+        "title": "Bonjour, je suis",
+        "role": "Ingénieur logiciel aspirant et développeur Full Stack JavaScript avec plus d'un an d'expérience.",
+        "roles": [
+            "Ingénieur Logiciel",
+            "Développeur Full Stack JavaScript"
+        ],
+        "downloadCv": "Télécharger CV",
+        "workProjects": "Projets Professionnels",
+        "personalProjects": "Projets Personnels"
+    },
+    "Header": {
+        "contactMe": "Me Contacter"
+    },
+    "Nav": {
+        "home": "accueil",
+        "resume": "cv",
+        "work": "projets pro",
+        "projects": "projets perso",
+        "contact": "contact"
+    },
+    "Resume": {
+        "about": {
+            "title": "À propos de moi",
+            "description": "Je suis un développeur logiciel passionné par la création d'expériences numériques élégantes. Je maîtrise divers langages et technologies de programmation.",
+            "items": {
+                "Name": "Sami Ayachi",
+                "Email": "semiayachi.contact@gmail.com",
+                "Experience": "1 An",
+                "Nationality": "Tunisien",
+                "Freelance": "Disponible",
+                "languages": "Anglais, Français, Arabe"
+            }
+        },
+        "experiences": {
+            "title": "Mes Expériences",
+            "description": "Développeur Full Stack et Ingénieur Logiciel avec plus d'un an d'expérience dans la création d'applications réactives et de systèmes backend robustes.",
+            "items": [
+                {
+                    "company": "Kamioun",
+                    "position": "Ingénieur Mobile",
+                    "duration": "Juillet 2025 - Présent"
+                },
+                {
+                    "company": "Kamioun",
+                    "position": "Stagiaire Développeur Mobile",
+                    "duration": "Février 2025 - Juillet 2025"
+                },
+                {
+                    "company": "Arsela Technologies",
+                    "position": "Développeur Full-Stack Temps Plein",
+                    "duration": "Février 2024 - Présent"
+                },
+                {
+                    "company": "Arsela Technologies",
+                    "position": "Stagiaire d'été",
+                    "duration": "Juin 2023 - Août 2023"
+                },
+                {
+                    "company": "Reactit",
+                    "position": "Stagiaire PFE",
+                    "duration": "Février 2022 - Juin 2022"
+                },
+                {
+                    "company": "pixillum",
+                    "position": "Stagiaire d'été",
+                    "duration": "Août 2021 - Septembre 2021"
+                }
+            ]
+        },
+        "education": {
+            "title": "Mon Éducation",
+            "description": "Je suis titulaire d'une licence en Informatique et Multimédia, suivie d'un Master en Services Web et Multimédia, ainsi qu'en Génie Logiciel.",
+            "items": [
+                {
+                    "institution": "EPI DIGITAL SCHOOL",
+                    "degree": "Diplôme d'Ingénieur",
+                    "duration": "Sept 2023 - Juin 2025"
+                },
+                {
+                    "institution": "ISITCOM",
+                    "degree": "Master en Services Web",
+                    "duration": "2024-présent"
+                },
+                {
+                    "institution": "ISITCOM",
+                    "degree": "Licence en Informatique",
+                    "duration": "Sept 2019 - Juillet 2022"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Mes Compétences",
+            "description": "J'ai un large éventail de compétences que j'améliore constamment par la pratique et l'apprentissage."
+        },
+        "tabs": {
+            "experiences": "Expériences",
+            "education": "Éducation",
+            "skills": "Compétences",
+            "about": "À propos"
+        }
+    },
+    "Work": {
+        "projects": [
+            {
+                "num": "01",
+                "category": "e-Citoyen est un projet e-gouvernement",
+                "title": "projet 01",
+                "description": "En tant que développeur Full Stack JavaScript, je fais partie de l'équipe de développement du projet e-Citoyen, une initiative d'administration en ligne qui rationalise les services municipaux."
+            },
+            {
+                "num": "02",
+                "category": "WIDE : Solution Fintech pour prêts et immobilier",
+                "title": "projet 02",
+                "description": "En tant que développeur Frontend, je contribue au projet WIDE, une solution fintech qui simplifie le processus d'obtention de prêts et d'achat de maisons."
+            }
+        ]
+    },
+    "PersonalProject": {
+        "projects": [
+            {
+                "name": "Système de Demande de Prêt",
+                "description": "Une application de demande de prêt développée avec Spring Boot pour les services backend, implémentant Spring Security pour l'authentification et l'autorisation."
+            },
+            {
+                "name": "Plateforme d'Apprentissage en Ligne",
+                "description": "Une plateforme d'apprentissage en ligne avec des fonctionnalités pour gérer les enseignants, les étudiants et les salles de classe."
+            },
+            {
+                "name": "Guide de Voyage",
+                "description": "Une plateforme complète de réservation de voyages qui permet aux utilisateurs de réserver des vols, des hôtels et des voitures de location."
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Travaillons ensemble",
+        "description": "Si vous souhaitez collaborer ou discuter d'opportunités, n'hésitez pas à me contacter. Je suis toujours ouvert aux nouvelles idées et projets !",
+        "placeholders": {
+            "firstName": "Prénom",
+            "lastName": "Nom",
+            "email": "Email",
+            "phone": "Téléphone",
+            "message": "tapez votre message ici ."
+        },
+        "button": "Envoyer Message",
+        "info": {
+            "phone": "Téléphone",
+            "email": "Email",
+            "address": "adresse"
+        }
+    }
+}

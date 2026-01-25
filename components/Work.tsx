@@ -13,14 +13,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import { useTranslations } from "next-intl";
 
-const projects = [
+const projectsConfig = [
     {
         num: "01",
-        category: "e-Citoyen is an e-government project",
-        title: "project 01",
-        description:
-            "As a Full Stack JavaScript Developer, I'm part of the development team for the e-Citoyen project, an e-government initiative that streamlines municipal services and makes it easier for citizens to manage their needs online.",
         stack: [
             { name: "Redux" },
             { name: "ReduxSaga" },
@@ -36,10 +33,6 @@ const projects = [
     },
     {
         num: "02",
-        category: "WIDE: A Fintech Solution for Simplifying Loans and Home Buying",
-        title: "project 02",
-        description:
-            "As a Frontend Developer, I contribute to the WIDE project, a fintech solution that simplifies the process of securing loans and purchasing homes by creating intuitive, user-friendly interfaces that enhance the overall user experience. ",
         stack: [
             { name: "ReactJS" },
             { name: "Django" },
@@ -56,6 +49,15 @@ const projects = [
 ];
 
 const Work = () => {
+    const t = useTranslations("Work");
+    // Merge static config with translations
+    const projects = projectsConfig.map((item, index) => ({
+        ...item,
+        category: t(`projects.${index}.category`),
+        title: t(`projects.${index}.title`),
+        description: t(`projects.${index}.description`),
+    }));
+
     const [project, setProject] = useState(projects[0]);
     const handelslidechange = (swiper: any) => {
         const currentIndex = swiper.activeIndex;

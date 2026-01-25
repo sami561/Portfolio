@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "@/lib/motion";
 import Image from "next/image";
-import { LampContainer } from "@/components/ui/lamp";
+import { useTranslations } from "next-intl";
 
 type Project = {
     name: string;
@@ -16,11 +16,8 @@ type Project = {
     source_code_link: string;
 };
 
-const projects: Project[] = [
+const projectsConfig = [
     {
-        name: "Loan Application System",
-        description:
-            "A loan request application developed with Spring Boot for backend services, implementing Spring Security for authentication and authorization. The frontend was built using reusable components and responsive design. ",
         tags: [
             { name: "Spring Boot", color: "blue-text-gradient" },
             { name: "Django", color: "green-text-gradient" },
@@ -33,9 +30,6 @@ const projects: Project[] = [
         source_code_link: "https://github.com/sami561/Loan-Application-Repo",
     },
     {
-        name: "Online Learning Platform",
-        description:
-            "An online learning platform with features for managing teachers, students, and classrooms. The backend was developed using Laravel, and the frontend with Angular. The platform is connected to an SQL database for data management.",
         tags: [
             { name: "Laravel", color: "blue-text-gradient" },
             { name: "Angular", color: "red-text-gradient" },
@@ -45,9 +39,6 @@ const projects: Project[] = [
         source_code_link: "//github.com/sami561/e-learning-website.git",
     },
     {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         tags: [
             { name: "nextjs", color: "blue-text-gradient" },
             { name: "supabase", color: "green-text-gradient" },
@@ -134,6 +125,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 };
 
 const PersonalProject: React.FC = () => {
+    const t = useTranslations("PersonalProject");
+    const projects: Project[] = projectsConfig.map((item, index) => ({
+        ...item,
+        name: t(`projects.${index}.name`),
+        description: t(`projects.${index}.description`),
+    }));
+
     return (
         <>
             <motion.div variants={textVariant()}>

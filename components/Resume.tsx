@@ -20,10 +20,7 @@ import {
     SiPostgresql,
     SiMongodb,
     SiExpress,
-    SiReact,
     SiNextdotjs,
-    SiJavascript,
-    SiAngular,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -34,193 +31,134 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
-import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
+import { useTranslations } from "next-intl";
 
-const about = {
-    title: "About me",
-    description:
-        "I am a software developer with a passion for crafting elegant digital experiences. I am proficient in various programming languages and technologies.",
-    info: [
-        {
-            fieldName: "Name",
-            fieldValue: "Sami Ayachi",
-        },
-        {
-            fieldName: "Email",
-            fieldValue: "semiayachi.contact@gmail.com",
-        },
-        {
-            fieldName: "Experience",
-            fieldValue: "1 Years",
-        },
-        {
-            fieldName: "Nationality",
-            fieldValue: "Tunisian",
-        },
-        {
-            fieldName: "Freelance",
-            fieldValue: "Available",
-        },
-        {
-            fieldName: "languages",
-            fieldValue: "English, French, Arabic",
-        },
-    ],
-};
-const experiences = {
-    icon: "",
-    title: "My Experiences",
-    description:
-        "Full Stack Developer and Software Engineer with 1+ years of experience in building responsive applications and robust backend systems. Skilled in delivering high-quality code and collaborating with cross-functional teams to create scalable, user-friendly software solutions. ",
-    items: [
-        {
-            company: "Kamioun",
-            position: "Mobile Engineer",
-            duration: "July 2025 - Present",
-        },
-        {
-            company: "Kamioun",
-            position: "Intern Mobile Developer",
-            duration: "February 2025 - July 2025",
-        },
-        {
-            company: "Arsela Technologies",
-            position: "Full-Time Full-Stack Developer",
-            duration: "February 2024 - Present",
-        },
-        {
-            company: "Arsela Technologies",
-            position: "Summer Intern",
-            duration: "June 2023 - August 2023",
-        },
-        {
-            company: "Reactit",
-            position: "End-of-Study Project Intern",
-            duration: "February 2022 - June 2022",
-        },
-        {
-            company: "pixillum",
-            position: "Summer Intern",
-            duration: "August 2021-September 2021",
-        },
-    ],
-};
-const education = {
-    icon: "",
-    title: "My Education",
-    description:
-        "I hold a Bachelor's degree in Computer Science and Multimedia, followed by a Master's in Web Services and Multimedia, alongside Software Engineering. This academic journey has equipped me with a strong foundation in both technical and creative problem-solving.",
-    items: [
-        {
-            institution: "EPI DIGITAL SCHOOL",
-            degree: "Engineering Degree ",
-            duration: "Sept 2023 - June 2025",
-        },
-        {
-            institution: "ISITCOM",
-            degree: "Master Degree in Web services ",
-            duration: "2024-present",
-        },
-        {
-            institution: "ISITCOM",
-            degree: "Bachelor’s Degree in Computer Science",
-            duration: "Sept 2019 - July 2022",
-        },
-    ],
-};
-const skills = {
-    title: "My Skills",
-    description:
-        "I have a wide range of skills that I am constantly improving through practice and learning.",
-    skillList: [
-        {
-            name: "HTML",
-            icon: <FaHtml5 />,
-        },
-        {
-            name: "CSS",
-            icon: <FaCss3 />,
-        },
-        {
-            name: "JavaScript",
-            icon: <FaJs />,
-        },
-        {
-            name: "React",
-            icon: <FaReact />,
-        },
-        {
-            name: "NodeJs",
-            icon: <FaNodeJs />,
-        },
-        {
-            name: "TailwindCss",
-            icon: <SiTailwindcss />,
-        },
-        {
-            name: "NextJs",
-            icon: <SiNextdotjs />,
-        },
-        {
-            name: "Figma",
-            icon: <FaFigma />,
-        },
-        {
-            name: "Python (Django)",
-            icon: <FaPython />,
-        },
-        {
-            name: "Angular",
-            icon: <FaAngular />,
-        },
-        {
-            name: "ReactJS",
-            icon: <FaReact />,
-        },
-
-        {
-            name: "NodeJS",
-            icon: <FaNodeJs />,
-        },
-        {
-            name: "ExpressJs",
-            icon: <SiExpress />,
-        },
-        {
-            name: "Java (Spring Boot)",
-            icon: <FaJava />,
-        },
-        {
-            name: "SQL (PostgreSQL)",
-            icon: <SiPostgresql />,
-        },
-        {
-            name: "NoSQL (MongoDB)",
-            icon: <SiMongodb />,
-        },
-        {
-            name: "Git",
-            icon: <FaGitAlt />,
-        },
-        {
-            name: "DevOps (Docker, Azure, Jenkins)",
-            icon: <FaDocker />, // For Docker
-        },
-        {
-            name: "Swift",
-            icon: <FaSwift />,
-        },
-        {
-            name: "Android",
-            icon: <FaAndroid />,
-        },
-        {
-            name: "React Native",
-            icon: <FaReact />,
-        },
-    ],
-};
 const Resume = () => {
+    const t = useTranslations("Resume");
+
+    const about = {
+        title: t("about.title"),
+        description: t("about.description"),
+        info: Object.entries(t.raw("about.items") as Record<string, string>).map(
+            ([fieldName, fieldValue]) => ({
+                fieldName,
+                fieldValue,
+            })
+        ),
+    };
+
+    const experiences = {
+        title: t("experiences.title"),
+        description: t("experiences.description"),
+        items: t.raw("experiences.items") as {
+            company: string;
+            position: string;
+            duration: string;
+        }[],
+    };
+
+    const education = {
+        title: t("education.title"),
+        description: t("education.description"),
+        items: t.raw("education.items") as {
+            institution: string;
+            degree: string;
+            duration: string;
+        }[],
+    };
+
+    const skills = {
+        title: t("skills.title"),
+        description: t("skills.description"),
+        skillList: [
+            {
+                name: "HTML",
+                icon: <FaHtml5 />,
+            },
+            {
+                name: "CSS",
+                icon: <FaCss3 />,
+            },
+            {
+                name: "JavaScript",
+                icon: <FaJs />,
+            },
+            {
+                name: "React",
+                icon: <FaReact />,
+            },
+            {
+                name: "NodeJs",
+                icon: <FaNodeJs />,
+            },
+            {
+                name: "TailwindCss",
+                icon: <SiTailwindcss />,
+            },
+            {
+                name: "NextJs",
+                icon: <SiNextdotjs />,
+            },
+            {
+                name: "Figma",
+                icon: <FaFigma />,
+            },
+            {
+                name: "Python (Django)",
+                icon: <FaPython />,
+            },
+            {
+                name: "Angular",
+                icon: <FaAngular />,
+            },
+            {
+                name: "ReactJS",
+                icon: <FaReact />,
+            },
+
+            {
+                name: "NodeJS",
+                icon: <FaNodeJs />,
+            },
+            {
+                name: "ExpressJs",
+                icon: <SiExpress />,
+            },
+            {
+                name: "Java (Spring Boot)",
+                icon: <FaJava />,
+            },
+            {
+                name: "SQL (PostgreSQL)",
+                icon: <SiPostgresql />,
+            },
+            {
+                name: "NoSQL (MongoDB)",
+                icon: <SiMongodb />,
+            },
+            {
+                name: "Git",
+                icon: <FaGitAlt />,
+            },
+            {
+                name: "DevOps (Docker, Azure, Jenkins)",
+                icon: <FaDocker />,
+            },
+            {
+                name: "Swift",
+                icon: <FaSwift />,
+            },
+            {
+                name: "Android",
+                icon: <FaAndroid />,
+            },
+            {
+                name: "React Native",
+                icon: <FaReact />,
+            },
+        ],
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -236,10 +174,10 @@ const Resume = () => {
                     className="flex flex-col xl:flex-row  gap-[60px]"
                 >
                     <TabsList className="flex flex-col w-full  max-w-[380px] mx-auto xl:mx-0 gap-6 ">
-                        <TabsTrigger value="experiences"> Experiences</TabsTrigger>
-                        <TabsTrigger value="education"> Education</TabsTrigger>
-                        <TabsTrigger value="skills"> Skills</TabsTrigger>
-                        <TabsTrigger value="about"> About me</TabsTrigger>
+                        <TabsTrigger value="experiences">{t("tabs.experiences")}</TabsTrigger>
+                        <TabsTrigger value="education">{t("tabs.education")}</TabsTrigger>
+                        <TabsTrigger value="skills">{t("tabs.skills")}</TabsTrigger>
+                        <TabsTrigger value="about">{t("tabs.about")}</TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value="experiences" className="w-full">

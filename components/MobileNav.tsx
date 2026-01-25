@@ -1,38 +1,43 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation"; // Keep standard or use navigation.ts?
+// Actually if I use Link from navigation.ts, I should use usePathname from navigation.ts for consistency in matching.
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
-import Link from "next/link";
-import path from "path";
-const links = [
-  {
-    name: "home",
-    path: "/#home",
-  },
-  /*   {
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
+
+const MobileNav = () => {
+  const pathname = usePathname();
+  const t = useTranslations("Nav");
+
+  const links = [
+    {
+      name: t("home"),
+      path: "/#home",
+    },
+    /*   {
     name: "services",
     path: "/services",
   }, */
-  {
-    name: "resume",
-    path: "/#resume",
-  },
-  {
-    name: "Work projects",
-    path: "/#work",
-  },
-  {
-    name: "Personal project",
-    path: "/#personal-project",
-  },
-  {
-    name: "contact",
-    path: "/#contact",
-  },
-];
-const MobileNav = () => {
-  const pathname = usePathname();
+    {
+      name: t("resume"),
+      path: "/#resume",
+    },
+    {
+      name: t("work"),
+      path: "/#work",
+    },
+    {
+      name: t("projects"),
+      path: "/#personal-project",
+    },
+    {
+      name: t("contact"),
+      path: "/#contact",
+    },
+  ];
+
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">

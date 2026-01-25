@@ -1,0 +1,153 @@
+{
+    "HomePage": {
+        "title": "Hola, soy",
+        "role": "Aspirante a Ingeniero de Software y Desarrollador Full Stack JavaScript con más de 1 año de experiencia.",
+        "roles": [
+            "Ingeniero de Software",
+            "Desarrollador Full Stack JavaScript"
+        ],
+        "downloadCv": "Descargar CV",
+        "workProjects": "Proyectos Laborales",
+        "personalProjects": "Proyectos Personales"
+    },
+    "Header": {
+        "contactMe": "Contáctame"
+    },
+    "Nav": {
+        "home": "inicio",
+        "resume": "cv",
+        "work": "proyectos laborales",
+        "projects": "proyectos personales",
+        "contact": "contacto"
+    },
+    "Resume": {
+        "about": {
+            "title": "Sobre mí",
+            "description": "Soy un desarrollador de software con pasión por crear experiencias digitales elegantes. Soy competente en varios lenguajes de programación y tecnologías.",
+            "items": {
+                "Name": "Sami Ayachi",
+                "Email": "semiayachi.contact@gmail.com",
+                "Experience": "1 Año",
+                "Nationality": "Tunecino",
+                "Freelance": "Disponible",
+                "languages": "Inglés, Francés, Árabe"
+            }
+        },
+        "experiences": {
+            "title": "Mis Experiencias",
+            "description": "Desarrollador Full Stack e Ingeniero de Software con más de 1 año de experiencia en la construcción de aplicaciones receptivas y sistemas backend robustos.",
+            "items": [
+                {
+                    "company": "Kamioun",
+                    "position": "Ingeniero Móvil",
+                    "duration": "Julio 2025 - Presente"
+                },
+                {
+                    "company": "Kamioun",
+                    "position": "Desarrollador Móvil en Prácticas",
+                    "duration": "Febrero 2025 - Julio 2025"
+                },
+                {
+                    "company": "Arsela Technologies",
+                    "position": "Desarrollador Full-Stack a Tiempo Completo",
+                    "duration": "Febrero 2024 - Presente"
+                },
+                {
+                    "company": "Arsela Technologies",
+                    "position": "Pasante de Verano",
+                    "duration": "Junio 2023 - Agosto 2023"
+                },
+                {
+                    "company": "Reactit",
+                    "position": "Pasante de Proyecto Final",
+                    "duration": "Febrero 2022 - Junio 2022"
+                },
+                {
+                    "company": "pixillum",
+                    "position": "Pasante de Verano",
+                    "duration": "Agosto 2021 - Septiembre 2021"
+                }
+            ]
+        },
+        "education": {
+            "title": "Mi Educación",
+            "description": "Tengo una licenciatura en Informática y Multimedia, seguida de una maestría en Servicios Web y Multimedia.",
+            "items": [
+                {
+                    "institution": "EPI DIGITAL SCHOOL",
+                    "degree": "Título de Ingeniero",
+                    "duration": "Sept 2023 - Junio 2025"
+                },
+                {
+                    "institution": "ISITCOM",
+                    "degree": "Maestría en Servicios Web",
+                    "duration": "2024-presente"
+                },
+                {
+                    "institution": "ISITCOM",
+                    "degree": "Licenciatura en Informática",
+                    "duration": "Sept 2019 - Julio 2022"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Mis Habilidades",
+            "description": "Tengo una amplia gama de habilidades que mejoro constantemente a través de la práctica y el aprendizaje."
+        },
+        "tabs": {
+            "experiences": "Experiencias",
+            "education": "Educación",
+            "skills": "Habilidades",
+            "about": "Sobre mí"
+        }
+    },
+    "Work": {
+        "projects": [
+            {
+                "num": "01",
+                "category": "e-Citoyen es un proyecto de gobierno electrónico",
+                "title": "proyecto 01",
+                "description": "Como Desarrollador Full Stack JavaScript, formo parte del equipo de desarrollo del proyecto e-Citoyen."
+            },
+            {
+                "num": "02",
+                "category": "WIDE: Solución Fintech",
+                "title": "proyecto 02",
+                "description": "Como Desarrollador Frontend, contribuyo al proyecto WIDE, una solución fintech que simplifica el proceso de obtención de préstamos."
+            }
+        ]
+    },
+    "PersonalProject": {
+        "projects": [
+            {
+                "name": "Sistema de Solicitud de Préstamos",
+                "description": "Una aplicación de solicitud de préstamos desarrollada con Spring Boot para servicios backend."
+            },
+            {
+                "name": "Plataforma de Aprendizaje en Línea",
+                "description": "Una plataforma de aprendizaje en línea con funciones para administrar profesores, estudiantes y aulas."
+            },
+            {
+                "name": "Guía de Viaje",
+                "description": "Una plataforma integral de reserva de viajes que permite a los usuarios reservar vuelos, hoteles y coches de alquiler."
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Trabajemos juntos",
+        "description": "Si desea colaborar o discutir alguna oportunidad, no dude en ponerse en contacto conmigo.",
+        "placeholders": {
+            "firstName": "Nombre",
+            "lastName": "Apellido",
+            "email": "Correo electrónico",
+            "phone": "Teléfono",
+            "message": "escribe tu mensaje aquí ."
+        },
+        "button": "Enviar Mensaje",
+        "info": {
+            "phone": "Teléfono",
+            "email": "Correo",
+            "address": "dirección"
+        }
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "HomePage": {
+        "title": "Hello I'm",
+        "role": "Aspiring Software Engineer and Full Stack JavaScript Developer with 1+ years of experience.",
+        "roles": [
+            "Software Engineer",
+            "Full Stack JavaScript Developer"
+        ],
+        "downloadCv": "Download CV",
+        "workProjects": "Work Projects",
+        "personalProjects": "Personal Projects"
+    },
+    "Header": {
+        "contactMe": "Contact Me"
+    },
+    "Nav": {
+        "home": "home",
+        "resume": "resume",
+        "work": "Work projects",
+        "projects": "Personal project",
+        "contact": "contact"
+    },
+    "Resume": {
+        "about": {
+            "title": "About me",
+            "description": "I am a software developer with a passion for crafting elegant digital experiences. I am proficient in various programming languages and technologies.",
+            "items": {
+                "Name": "Sami Ayachi",
+                "Email": "semiayachi.contact@gmail.com",
+                "Experience": "1 Years",
+                "Nationality": "Tunisian",
+                "Freelance": "Available",
+                "languages": "English, French, Arabic"
+            }
+        },
+        "experiences": {
+            "title": "My Experiences",
+            "description": "Full Stack Developer and Software Engineer with 1+ years of experience in building responsive applications and robust backend systems. Skilled in delivering high-quality code and collaborating with cross-functional teams to create scalable, user-friendly software solutions. ",
+            "items": [
+                {
+                    "company": "Kamioun",
+                    "position": "Mobile Engineer",
+                    "duration": "July 2025 - Present"
+                },
+                {
+                    "company": "Kamioun",
+                    "position": "Intern Mobile Developer",
+                    "duration": "February 2025 - July 2025"
+                },
+                {
+                    "company": "Arsela Technologies",
+                    "position": "Full-Time Full-Stack Developer",
+                    "duration": "February 2024 - Present"
+                },
+                {
+                    "company": "Arsela Technologies",
+                    "position": "Summer Intern",
+                    "duration": "June 2023 - August 2023"
+                },
+                {
+                    "company": "Reactit",
+                    "position": "End-of-Study Project Intern",
+                    "duration": "February 2022 - June 2022"
+                },
+                {
+                    "company": "pixillum",
+                    "position": "Summer Intern",
+                    "duration": "August 2021-September 2021"
+                }
+            ]
+        },
+        "education": {
+            "title": "My Education",
+            "description": "I hold a Bachelor's degree in Computer Science and Multimedia, followed by a Master's in Web Services and Multimedia, alongside Software Engineering. This academic journey has equipped me with a strong foundation in both technical and creative problem-solving.",
+            "items": [
+                {
+                    "institution": "EPI DIGITAL SCHOOL",
+                    "degree": "Engineering Degree ",
+                    "duration": "Sept 2023 - June 2025"
+                },
+                {
+                    "institution": "ISITCOM",
+                    "degree": "Master Degree in Web services ",
+                    "duration": "2024-present"
+                },
+                {
+                    "institution": "ISITCOM",
+                    "degree": "Bachelor’s Degree in Computer Science",
+                    "duration": "Sept 2019 - July 2022"
+                }
+            ]
+        },
+        "skills": {
+            "title": "My Skills",
+            "description": "I have a wide range of skills that I am constantly improving through practice and learning."
+        },
+        "tabs": {
+            "experiences": "Experiences",
+            "education": "Education",
+            "skills": "Skills",
+            "about": "About me"
+        }
+    },
+    "Work": {
+        "projects": [
+            {
+                "num": "01",
+                "category": "e-Citoyen is an e-government project",
+                "title": "project 01",
+                "description": "As a Full Stack JavaScript Developer, I'm part of the development team for the e-Citoyen project, an e-government initiative that streamlines municipal services and makes it easier for citizens to manage their needs online."
+            },
+            {
+                "num": "02",
+                "category": "WIDE: A Fintech Solution for Simplifying Loans and Home Buying",
+                "title": "project 02",
+                "description": "As a Frontend Developer, I contribute to the WIDE project, a fintech solution that simplifies the process of securing loans and purchasing homes by creating intuitive, user-friendly interfaces that enhance the overall user experience."
+            }
+        ]
+    },
+    "PersonalProject": {
+        "projects": [
+            {
+                "name": "Loan Application System",
+                "description": "A loan request application developed with Spring Boot for backend services, implementing Spring Security for authentication and authorization. The frontend was built using reusable components and responsive design."
+            },
+            {
+                "name": "Online Learning Platform",
+                "description": "An online learning platform with features for managing teachers, students, and classrooms. The backend was developed using Laravel, and the frontend with Angular. The platform is connected to an SQL database for data management."
+            },
+            {
+                "name": "Trip Guide",
+                "description": "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations."
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Lets Work together",
+        "description": "If you'd like to collaborate or discuss any opportunities, feel free to contact me. I'm always open to new ideas and projects!",
+        "placeholders": {
+            "firstName": "Firstname",
+            "lastName": "Lastname",
+            "email": "Email",
+            "phone": "Phone",
+            "message": "type your message here ."
+        },
+        "button": "Send Message",
+        "info": {
+            "phone": "Phone",
+            "email": "Email",
+            "address": "address"
+        }
+    }
+}

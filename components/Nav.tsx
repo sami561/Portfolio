@@ -1,34 +1,38 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-const links = [
-  {
-    name: "home",
-    path: "/#home",
-  },
-  /*   {
+import { Link } from "@/navigation"; // Use typed Link
+import { usePathname } from "@/navigation";
+import { useTranslations } from "next-intl";
+
+const Nav = () => {
+  const pathname = usePathname();
+  const t = useTranslations("Nav");
+
+  const links = [
+    {
+      name: t("home"),
+      path: "/#home",
+    },
+    /*   {
     name: "services",
     path: "/services",
   }, */
-  {
-    name: "resume",
-    path: "/#resume",
-  },
-  {
-    name: "Work projects",
-    path: "/#work",
-  },
-  {
-    name: "Personal project",
-    path: "/#personal-project",
-  },
-  {
-    name: "contact",
-    path: "/#contact",
-  },
-];
-const Nav = () => {
-  const pathname = usePathname();
+    {
+      name: t("resume"),
+      path: "/#resume",
+    },
+    {
+      name: t("work"),
+      path: "/#work",
+    },
+    {
+      name: t("projects"),
+      path: "/#personal-project",
+    },
+    {
+      name: t("contact"),
+      path: "/#contact",
+    },
+  ];
 
   return (
     <nav className="flex gap-8">

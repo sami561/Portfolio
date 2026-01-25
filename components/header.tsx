@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
+// import Link from "next/link"; // Removed in favor of @/navigation
 import Nav from "./Nav";
 import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
 import { AiFillPhone } from "react-icons/ai";
 import { ThemeToggle } from "./ThemeToggle";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Link } from "@/navigation";
 
 const Header = () => {
   const [hovered, setHovered] = useState(false);
+  const t = useTranslations("Header");
 
   return (
     <header className="py-8 xl:py-12 ">
@@ -25,12 +29,13 @@ const Header = () => {
             <Button
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
-              className="transition-all duration-300 flex items-center justify-center"
+              className={`${hovered && "text-primary"} transition-all duration-500`}
             >
-              Contact Me
+              {t("contactMe")}
             </Button>
           </Link>
           <ThemeToggle />
+          <LanguageSwitcher />
         </div>
         {/* Mobile nav */}
         <div className="xl:hidden">

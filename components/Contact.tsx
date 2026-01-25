@@ -15,23 +15,26 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { sendMail } from "@/lib/mail";
-
-const info = [
-    { icon: <FaPhoneAlt />, text: " +216 24 580 302", title: "Phone" },
-    {
-        icon: <FaEnvelope />,
-        text: "semiayachi.contact@gmail.com",
-        title: "Email",
-    },
-    { icon: <FaMapMarkerAlt />, text: "Tunisia, Sousse", title: "address" },
-];
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+    const t = useTranslations("Contact");
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
+
+    const info = [
+        { icon: <FaPhoneAlt />, text: " +216 24 580 302", title: t("info.phone") },
+        {
+            icon: <FaEnvelope />,
+            text: "semiayachi.contact@gmail.com",
+            title: t("info.email"),
+        },
+        { icon: <FaMapMarkerAlt />, text: "Tunisia, Sousse", title: t("info.address") },
+    ];
+
     const sendMailer = async (data: any) => {
         await sendMail({
             to: data.Email,
@@ -49,30 +52,29 @@ const Contact = () => {
                             onSubmit={handleSubmit(sendMailer)}
                             className="flex flex-col gap-6 p-10 bg-secondary rounded-xl"
                         >
-                            <h3 className="text-4xl text-accent">Lets Work together</h3>
+                            <h3 className="text-4xl text-accent">{t("title")}</h3>
                             <p className=" text-primary/60">
-                                If you'd like to collaborate or discuss any opportunities, feel
-                                free to contact me. I'm always open to new ideas and projects!
+                                {t("description")}
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input
                                     type="firstName"
-                                    placeholder="Firstname"
+                                    placeholder={t("placeholders.firstName")}
                                     {...register("firstName")}
                                 />
                                 <Input
                                     type="lastName"
-                                    placeholder="Lastname"
+                                    placeholder={t("placeholders.lastName")}
                                     {...register("Lastname")}
                                 />
                                 <Input
                                     type="email"
-                                    placeholder="Email"
+                                    placeholder={t("placeholders.email")}
                                     {...register("Email")}
                                 />
                                 <Input
                                     type="phone"
-                                    placeholder="Phone"
+                                    placeholder={t("placeholders.phone")}
                                     {...register("Phone")}
                                 />
                             </div>
@@ -91,10 +93,10 @@ const Contact = () => {
               </Select> */}
                             <Textarea
                                 className="h-[200px] "
-                                placeholder="type your  message here ."
+                                placeholder={t("placeholders.message")}
                                 {...register("message")}
                             />
-                            <Button size="lg">Send Message</Button>
+                            <Button size="lg">{t("button")}</Button>
                         </form>
                     </div>
                     <div className="flex-1 flex  items-center xl justify-end oder-1 xl:order-none mb-8 xl:mb-2">
