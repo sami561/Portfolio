@@ -1,7 +1,7 @@
 {
     "HomePage": {
         "title": "Bonjour, je suis",
-        "role": "Ingénieur logiciel aspirant et développeur Full Stack JavaScript avec plus d'un an d'expérience.",
+        "role": "Ingénieur logiciel et développeur Full Stack JavaScript avec près de 2 ans d'expérience professionnelle.",
         "roles": [
             "Ingénieur Logiciel",
             "Développeur Full Stack JavaScript"
@@ -26,8 +26,8 @@
             "description": "Je suis un développeur logiciel passionné par la création d'expériences numériques élégantes. Je maîtrise divers langages et technologies de programmation.",
             "items": {
                 "Name": "Sami Ayachi",
-                "Email": "semiayachi.contact@gmail.com",
-                "Experience": "1 An",
+                "Email": "sami.ayachi.dev@gmail.com",
+                "Experience": "2 Ans",
                 "Nationality": "Tunisien",
                 "Freelance": "Disponible",
                 "languages": "Anglais, Français, Arabe"
@@ -35,57 +35,52 @@
         },
         "experiences": {
             "title": "Mes Expériences",
-            "description": "Développeur Full Stack et Ingénieur Logiciel avec plus d'un an d'expérience dans la création d'applications réactives et de systèmes backend robustes.",
+            "description": "Ingénieur Logiciel avec près de 2 ans d'expérience professionnelle dans la conception et le développement de plateformes mobiles et web. Spécialisé en React Native et React.js, avec une expertise sur l'ensemble de la pile, des frontends intuitifs aux services backend robustes et aux déploiements cloud.",
             "items": [
                 {
                     "company": "Kamioun",
-                    "position": "Ingénieur Mobile",
-                    "duration": "Juillet 2025 - Présent"
+                    "position": "Développeur Mobile React Native",
+                    "duration": "Août 2025 - Présent"
                 },
                 {
                     "company": "Kamioun",
-                    "position": "Stagiaire Développeur Mobile",
+                    "position": "Stagiaire PFE",
                     "duration": "Février 2025 - Juillet 2025"
                 },
                 {
                     "company": "Arsela Technologies",
-                    "position": "Développeur Full-Stack Temps Plein",
-                    "duration": "Février 2024 - Présent"
+                    "position": "Développeur Full-Stack",
+                    "duration": "Février 2024 - Septembre 2024"
                 },
                 {
                     "company": "Arsela Technologies",
                     "position": "Stagiaire d'été",
-                    "duration": "Juin 2023 - Août 2023"
+                    "duration": "Juin 2023 - Septembre 2023"
                 },
                 {
                     "company": "Reactit",
                     "position": "Stagiaire PFE",
                     "duration": "Février 2022 - Juin 2022"
-                },
-                {
-                    "company": "pixillum",
-                    "position": "Stagiaire d'été",
-                    "duration": "Août 2021 - Septembre 2021"
                 }
             ]
         },
         "education": {
             "title": "Mon Éducation",
-            "description": "Je suis titulaire d'une licence en Informatique et Multimédia, suivie d'un Master en Services Web et Multimédia, ainsi qu'en Génie Logiciel.",
+            "description": "Je suis titulaire d'un diplôme d'ingénieur en génie logiciel et d'un master en services web et multimédia. Ce parcours académique m'a doté d'une base solide en résolution de problèmes techniques et créatifs.",
             "items": [
                 {
                     "institution": "EPI DIGITAL SCHOOL",
-                    "degree": "Diplôme d'Ingénieur",
+                    "degree": "Diplôme d'Ingénieur en Génie Informatique",
                     "duration": "Sept 2023 - Juin 2025"
                 },
                 {
                     "institution": "ISITCOM",
-                    "degree": "Master en Services Web",
-                    "duration": "2024-présent"
+                    "degree": "Master en Services Web et Multimédia",
+                    "duration": "Sept 2022 - Juin 2025"
                 },
                 {
                     "institution": "ISITCOM",
-                    "degree": "Licence en Informatique",
+                    "degree": "Licence en Informatique et Multimédia",
                     "duration": "Sept 2019 - Juillet 2022"
                 }
             ]
@@ -107,29 +102,29 @@
                 "num": "01",
                 "category": "e-Citoyen est un projet e-gouvernement",
                 "title": "projet 01",
-                "description": "En tant que développeur Full Stack JavaScript, je fais partie de l'équipe de développement du projet e-Citoyen, une initiative d'administration en ligne qui rationalise les services municipaux."
+                "description": "Développement d'interfaces web réactives avec React.js et Next.js, implémentation de notifications en temps réel avec Socket.io et conception d'un système de file d'attente Redis."
             },
             {
                 "num": "02",
                 "category": "WIDE : Solution Fintech pour prêts et immobilier",
                 "title": "projet 02",
-                "description": "En tant que développeur Frontend, je contribue au projet WIDE, une solution fintech qui simplifie le processus d'obtention de prêts et d'achat de maisons."
+                "description": "Refonte et amélioration de l'interface utilisateur avec React/Next.js et Tailwind CSS, et développement d'une API REST Django avec calculs hypothécaires basés sur NumPy."
             }
         ]
     },
     "PersonalProject": {
         "projects": [
             {
-                "name": "Système de Demande de Prêt",
-                "description": "Une application de demande de prêt développée avec Spring Boot pour les services backend, implémentant Spring Security pour l'authentification et l'autorisation."
+                "name": "Coding Moon – Jeu de Combat Pokémon 3D",
+                "description": "Un jeu de combat Pokémon 3D sur navigateur utilisant React et Vite. Implémentation d'un système de combat au tour par tour avec collecte de pièces, attaques et progression de niveau. Vainqueur du Coding Moon Challenge 2025."
             },
             {
-                "name": "Plateforme d'Apprentissage en Ligne",
-                "description": "Une plateforme d'apprentissage en ligne avec des fonctionnalités pour gérer les enseignants, les étudiants et les salles de classe."
+                "name": "Système de Demande de Prêt Amélioré",
+                "description": "Un microservice utilisant Spring Boot intégré à une API Django pour les calculs de prêts. Frontend réactif avec React, Redux Toolkit et Material-UI. Conteneurisé avec Docker et CI/CD avec Jenkins."
             },
             {
-                "name": "Guide de Voyage",
-                "description": "Une plateforme complète de réservation de voyages qui permet aux utilisateurs de réserver des vols, des hôtels et des voitures de location."
+                "name": "Calculateur Manorga – Estimateur de Toiture Solaire",
+                "description": "Application web utilisant React qui estime le nombre de panneaux solaires pouvant tenir sur le toit d'un utilisateur. Intégration de données météorologiques et de Google Maps."
             }
         ]
     },

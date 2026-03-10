@@ -26,10 +26,10 @@ const Contact = () => {
     } = useForm();
 
     const info = [
-        { icon: <FaPhoneAlt />, text: " +216 24 580 302", title: t("info.phone") },
+        { icon: <FaPhoneAlt />, text: " +216 28 699 806", title: t("info.phone") },
         {
             icon: <FaEnvelope />,
-            text: "semiayachi.contact@gmail.com",
+            text: "sami.ayachi.dev@gmail.com",
             title: t("info.email"),
         },
         { icon: <FaMapMarkerAlt />, text: "Tunisia, Sousse", title: t("info.address") },

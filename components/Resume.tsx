@@ -6,14 +6,13 @@ import {
     FaJs,
     FaReact,
     FaNodeJs,
-    FaFigma,
     FaPython,
-    FaAngular,
     FaJava,
     FaGitAlt,
     FaDocker,
-    FaAndroid,
-    FaSwift,
+    FaAws,
+    FaBootstrap,
+    FaMicrosoft,
 } from "react-icons/fa";
 import {
     SiTailwindcss,
@@ -21,6 +20,14 @@ import {
     SiMongodb,
     SiExpress,
     SiNextdotjs,
+    SiTypescript,
+    SiNestjs,
+    SiKubernetes,
+    SiGraphql,
+    SiReduxsaga,
+    SiMysql,
+    SiGithub,
+    SiJenkins,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -72,50 +79,25 @@ const Resume = () => {
         description: t("skills.description"),
         skillList: [
             {
-                name: "HTML",
-                icon: <FaHtml5 />,
-            },
-            {
-                name: "CSS",
-                icon: <FaCss3 />,
-            },
-            {
                 name: "JavaScript",
                 icon: <FaJs />,
+            },
+            {
+                name: "TypeScript",
+                icon: <SiTypescript />,
             },
             {
                 name: "React",
                 icon: <FaReact />,
             },
             {
-                name: "NodeJs",
-                icon: <FaNodeJs />,
-            },
-            {
-                name: "TailwindCss",
-                icon: <SiTailwindcss />,
-            },
-            {
-                name: "NextJs",
+                name: "NextJS",
                 icon: <SiNextdotjs />,
             },
             {
-                name: "Figma",
-                icon: <FaFigma />,
-            },
-            {
-                name: "Python (Django)",
-                icon: <FaPython />,
-            },
-            {
-                name: "Angular",
-                icon: <FaAngular />,
-            },
-            {
-                name: "ReactJS",
+                name: "React Native",
                 icon: <FaReact />,
             },
-
             {
                 name: "NodeJS",
                 icon: <FaNodeJs />,
@@ -125,36 +107,76 @@ const Resume = () => {
                 icon: <SiExpress />,
             },
             {
+                name: "NestJS",
+                icon: <SiNestjs />,
+            },
+            {
                 name: "Java (Spring Boot)",
                 icon: <FaJava />,
             },
             {
-                name: "SQL (PostgreSQL)",
+                name: "Python",
+                icon: <FaPython />,
+            },
+            {
+                name: "Medusa.js",
+                icon: <FaNodeJs />,
+            },
+            {
+                name: "GraphQL",
+                icon: <SiGraphql />,
+            },
+            {
+                name: "TailwindCss",
+                icon: <SiTailwindcss />,
+            },
+            {
+                name: "Bootstrap",
+                icon: <FaBootstrap />,
+            },
+            {
+                name: "Redux Saga",
+                icon: <SiReduxsaga />,
+            },
+            {
+                name: "PostgreSQL",
                 icon: <SiPostgresql />,
             },
             {
-                name: "NoSQL (MongoDB)",
+                name: "MySQL",
+                icon: <SiMysql />,
+            },
+            {
+                name: "MongoDB",
                 icon: <SiMongodb />,
+            },
+            {
+                name: "Docker",
+                icon: <FaDocker />,
+            },
+            {
+                name: "Kubernetes",
+                icon: <SiKubernetes />,
+            },
+            {
+                name: "AWS",
+                icon: <FaAws />,
             },
             {
                 name: "Git",
                 icon: <FaGitAlt />,
             },
             {
-                name: "DevOps (Docker, Azure, Jenkins)",
-                icon: <FaDocker />,
+                name: "GitHub",
+                icon: <SiGithub />,
             },
             {
-                name: "Swift",
-                icon: <FaSwift />,
+                name: "Jenkins",
+                icon: <SiJenkins />,
             },
             {
-                name: "Android",
-                icon: <FaAndroid />,
-            },
-            {
-                name: "React Native",
-                icon: <FaReact />,
+                name: "Azure",
+                icon: <FaMicrosoft />,
             },
         ],
     };

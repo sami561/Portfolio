@@ -1,7 +1,7 @@
 {
     "HomePage": {
         "title": "Hello I'm",
-        "role": "Aspiring Software Engineer and Full Stack JavaScript Developer with 1+ years of experience.",
+        "role": "Software Engineer and Full Stack JavaScript Developer with nearly 2 years of professional experience.",
         "roles": [
             "Software Engineer",
             "Full Stack JavaScript Developer"
@@ -26,8 +26,8 @@
             "description": "I am a software developer with a passion for crafting elegant digital experiences. I am proficient in various programming languages and technologies.",
             "items": {
                 "Name": "Sami Ayachi",
-                "Email": "semiayachi.contact@gmail.com",
-                "Experience": "1 Years",
+                "Email": "sami.ayachi.dev@gmail.com",
+                "Experience": "2 Years",
                 "Nationality": "Tunisian",
                 "Freelance": "Available",
                 "languages": "English, French, Arabic"
@@ -35,57 +35,52 @@
         },
         "experiences": {
             "title": "My Experiences",
-            "description": "Full Stack Developer and Software Engineer with 1+ years of experience in building responsive applications and robust backend systems. Skilled in delivering high-quality code and collaborating with cross-functional teams to create scalable, user-friendly software solutions. ",
+            "description": "Software Engineer with nearly 2 years of professional experience designing and developing mobile and web platforms. Specialized in React Native and React.js, with expertise across the full stack from intuitive frontends to robust backend services and cloud deployments.",
             "items": [
                 {
                     "company": "Kamioun",
-                    "position": "Mobile Engineer",
-                    "duration": "July 2025 - Present"
+                    "position": "React Native Mobile Developer",
+                    "duration": "August 2025 - Present"
                 },
                 {
                     "company": "Kamioun",
-                    "position": "Intern Mobile Developer",
+                    "position": "End-of-Study Intern",
                     "duration": "February 2025 - July 2025"
                 },
                 {
                     "company": "Arsela Technologies",
-                    "position": "Full-Time Full-Stack Developer",
-                    "duration": "February 2024 - Present"
+                    "position": "Full-Stack Developer",
+                    "duration": "February 2024 - September 2024"
                 },
                 {
                     "company": "Arsela Technologies",
                     "position": "Summer Intern",
-                    "duration": "June 2023 - August 2023"
+                    "duration": "June 2023 - September 2023"
                 },
                 {
                     "company": "Reactit",
-                    "position": "End-of-Study Project Intern",
+                    "position": "End-of-Study Intern",
                     "duration": "February 2022 - June 2022"
-                },
-                {
-                    "company": "pixillum",
-                    "position": "Summer Intern",
-                    "duration": "August 2021-September 2021"
                 }
             ]
         },
         "education": {
             "title": "My Education",
-            "description": "I hold a Bachelor's degree in Computer Science and Multimedia, followed by a Master's in Web Services and Multimedia, alongside Software Engineering. This academic journey has equipped me with a strong foundation in both technical and creative problem-solving.",
+            "description": "I hold an Engineering degree in Software Engineering and a Master's degree in Web Services and Multimedia. This academic journey has equipped me with a strong foundation in both technical and creative problem-solving.",
             "items": [
                 {
                     "institution": "EPI DIGITAL SCHOOL",
-                    "degree": "Engineering Degree ",
+                    "degree": "Engineering Degree in Computer Engineering",
                     "duration": "Sept 2023 - June 2025"
                 },
                 {
                     "institution": "ISITCOM",
-                    "degree": "Master Degree in Web services ",
-                    "duration": "2024-present"
+                    "degree": "Master Degree in Web Services and Multimedia",
+                    "duration": "Sept 2022 - June 2025"
                 },
                 {
                     "institution": "ISITCOM",
-                    "degree": "Bachelor’s Degree in Computer Science",
+                    "degree": "Bachelor's Degree in Computer Science and Multimedia",
                     "duration": "Sept 2019 - July 2022"
                 }
             ]
@@ -107,29 +102,29 @@
                 "num": "01",
                 "category": "e-Citoyen is an e-government project",
                 "title": "project 01",
-                "description": "As a Full Stack JavaScript Developer, I'm part of the development team for the e-Citoyen project, an e-government initiative that streamlines municipal services and makes it easier for citizens to manage their needs online."
+                "description": "Developed responsive web interfaces using React.js and Next.js, implemented real-time notifications with Socket.io, and designed a Redis-based scheduled queue system."
             },
             {
                 "num": "02",
                 "category": "WIDE: A Fintech Solution for Simplifying Loans and Home Buying",
                 "title": "project 02",
-                "description": "As a Frontend Developer, I contribute to the WIDE project, a fintech solution that simplifies the process of securing loans and purchasing homes by creating intuitive, user-friendly interfaces that enhance the overall user experience."
+                "description": "Redesigned and improved the UI using React/Next.js and Tailwind CSS, and developed a Django REST API with NumPy-based mortgage calculations."
             }
         ]
     },
     "PersonalProject": {
         "projects": [
             {
-                "name": "Loan Application System",
-                "description": "A loan request application developed with Spring Boot for backend services, implementing Spring Security for authentication and authorization. The frontend was built using reusable components and responsive design."
+                "name": "Coding Moon – 3D Pokémon Battle Game",
+                "description": "A browser-based 3D Pokémon battle game using React and Vite. Implemented a turn-based battle system with coin collection, attacks, health points, and level progression. Winner of the Coding Moon Challenge 2025."
             },
             {
-                "name": "Online Learning Platform",
-                "description": "An online learning platform with features for managing teachers, students, and classrooms. The backend was developed using Laravel, and the frontend with Angular. The platform is connected to an SQL database for data management."
+                "name": "Enhanced Loan Application System",
+                "description": "A microservice using Spring Boot integrated with a Django API for loan and mortgage calculations. Built a responsive frontend using React, Redux Toolkit, and Material-UI. Containerized with Docker and CI/CD with Jenkins."
             },
             {
-                "name": "Trip Guide",
-                "description": "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations."
+                "name": "Calculateur Manorga – Solar Panel Roof Estimator",
+                "description": "Built a web application using React that estimates the number of solar panels that can fit on a user's roof. Integrated weather data and Google Maps APIs for visualization. "
             }
         ]
     },
