@@ -28,7 +28,7 @@ const projectsConfig = [
             { name: "react", color: "green-text-gradient" },
         ],
         image: "/assets/Project01/dashboardLight.png",
-        source_code_link: "https://github.com/sami561/Loan-Application-Repo",
+        source_code_link: "https://github.com/sami561/Loan-Application-Repo.git",
     },
     {
         tags: [
@@ -37,7 +37,7 @@ const projectsConfig = [
             { name: "SQL", color: "green-text-gradient" },
         ],
         image: "/assets/Project01/add.png",
-        source_code_link: "//github.com/sami561/e-learning-website.git",
+        source_code_link: "https://github.com/sami561/e-learning-website.git",
     },
     {
         tags: [
@@ -45,8 +45,8 @@ const projectsConfig = [
             { name: "maps-api", color: "green-text-gradient" },
             { name: "weather-api", color: "pink-text-gradient" },
         ],
-        image: "/assets/manorga.png", // Ensure this image is saved here
-        figma_link: "https://www.figma.com/design/2pEiuBU87hu5X8EAhnclyV/CalculateurManorga?node-id=2-855&t=rLPQ7otCDG7lW2Se-0",
+        image: "/assets/manorga.png",
+        figma_link: "https://github.com/sami561/calculator-manorga.git",
     },
 ];
 
