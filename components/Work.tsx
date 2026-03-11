@@ -46,6 +46,28 @@ const projectsConfig = [
         live: "http://appflow.wide.tn:3001/",
         github: "",
     },
+    {
+        num: "03",
+        stack: [
+            { name: "React Native" },
+            { name: "TypeScript" },
+            { name: "Redux" }
+        ],
+        image: "/assets/kamioun.png",
+        live: "",
+        github: "",
+    },
+    {
+        num: "04",
+        stack: [
+            { name: "ReactJS" },
+            { name: "Next.js" },
+            { name: "Tailwind CSS" }
+        ],
+        image: "/assets/Project01/dashboardLight.png",
+        live: "",
+        github: "",
+    },
 ];
 
 const Work = () => {

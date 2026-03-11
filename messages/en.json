@@ -109,6 +109,18 @@
                 "category": "WIDE: A Fintech Solution for Simplifying Loans and Home Buying",
                 "title": "project 02",
                 "description": "Redesigned and improved the UI using React/Next.js and Tailwind CSS, and developed a Django REST API with NumPy-based mortgage calculations."
+            },
+            {
+                "num": "03",
+                "category": "Mobile Application",
+                "title": "Kamioun App",
+                "description": "Developed features for the prominent Kamioun mobile application as a React Native developer."
+            },
+            {
+                "num": "04",
+                "category": "Internal Dashboard",
+                "title": "Order Management System",
+                "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
         ]
     },

@@ -109,6 +109,18 @@
                 "category": "WIDE: Solución Fintech para préstamos e inmobiliaria",
                 "title": "proyecto 02",
                 "description": "Rediseño y mejora de la interfaz de usuario con React/Next.js y Tailwind CSS, y desarrollo de una API REST Django con cálculos hipotecarios basados en NumPy."
+            },
+            {
+                "num": "03",
+                "category": "Aplicación Móvil",
+                "title": "Kamioun App",
+                "description": "Developed features for the prominent Kamioun mobile application as a React Native developer."
+            },
+            {
+                "num": "04",
+                "category": "Panel Interno",
+                "title": "Order Management System",
+                "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
         ]
     },

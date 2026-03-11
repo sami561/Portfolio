@@ -109,6 +109,18 @@
                 "category": "WIDE: حل للتكنولوجيا المالية",
                 "title": "مشروع 02",
                 "description": "إعادة تصميم وتحسين واجهة المستخدم باستخدام React/Next.js و Tailwind CSS، وتطوير Django REST API مع حسابات الرهن العقاري القائمة على NumPy."
+            },
+            {
+                "num": "03",
+                "category": "تطبيق جوال",
+                "title": "تطبيق كميون",
+                "description": "Developed features for the prominent Kamioun mobile application as a React Native developer."
+            },
+            {
+                "num": "04",
+                "category": "لوحة تحكم داخلية",
+                "title": "نظام إدارة الطلبات",
+                "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
         ]
     },
