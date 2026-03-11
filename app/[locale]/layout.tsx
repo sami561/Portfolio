@@ -39,14 +39,11 @@ export default async function LocaleLayout({
                         enableSystem
                         disableTransitionOnChange
                     >
-                        {/* Background Beams */}
                         <BackgroundBeams className="absolute inset-0 z-0 pointer-events-none" />
 
-                        {/* Main Content */}
                         <div className="relative z-10">
                             <Header />
                             <StairTransition />
-                            <PageTransition>{""}</PageTransition>
                             {children}
                         </div>
                     </ThemeProvider>
