@@ -11,6 +11,10 @@ const skillNames = [
     "React.js",
     "Next.js",
     "React Native",
+    "Expo",
+    "Medusa v2",
+    "Mercur",
+    "Magento",
     "Node.js",
     "Express",
     "NestJS",
@@ -22,12 +26,19 @@ const skillNames = [
     "PostgreSQL",
     "MySQL",
     "MongoDB",
+    "Redis",
     "Docker",
     "Kubernetes",
     "AWS",
     "Git",
     "Jenkins",
     "Azure",
+];
+
+// Credly badge URLs — fill in from https://www.credly.com/users/<your-handle>/badges
+const certifications = [
+    { id: "az-900", credlyUrl: "" },
+    { id: "ai-900", credlyUrl: "" },
 ];
 
 const Resume = () => {
@@ -52,6 +63,8 @@ const Resume = () => {
         degree: string;
         duration: string;
     }[];
+
+    const certificationNames = t.raw("certifications.items") as string[];
 
     const titles: Record<TabId, string> = {
         experiences: t("experiences.title"),
@@ -124,16 +137,50 @@ const Resume = () => {
                 )}
 
                 {activeTab === "skills" && (
-                    <div className="flex flex-wrap gap-3 max-w-[720px]">
-                        {skillNames.map((skill) => (
-                            <div
-                                key={skill}
-                                className="font-mono text-sm bg-accent-soft text-accent-soft-text border border-accent-soft-border rounded-lg px-4 py-2.5"
-                            >
-                                {skill}
-                            </div>
-                        ))}
-                    </div>
+                    <>
+                        <div className="flex flex-wrap gap-3 max-w-[720px]">
+                            {skillNames.map((skill) => (
+                                <div
+                                    key={skill}
+                                    className="font-mono text-sm bg-accent-soft text-accent-soft-text border border-accent-soft-border rounded-lg px-4 py-2.5"
+                                >
+                                    {skill}
+                                </div>
+                            ))}
+                        </div>
+                        <h3 className="text-xl font-semibold mt-12 mb-5">
+                            {t("certifications.title")}
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[720px]">
+                            {certifications.map((cert, index) => {
+                                const content = (
+                                    <>
+                                        <div className="font-mono text-accent text-[13px] mb-2">
+                                            Microsoft · Credly
+                                        </div>
+                                        <div className="text-[15px] font-semibold">
+                                            {certificationNames[index]}
+                                        </div>
+                                    </>
+                                );
+                                return cert.credlyUrl ? (
+                                    <a
+                                        key={cert.id}
+                                        href={cert.credlyUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="card-surface rounded-2xl p-6 hover:border-accent transition-colors block"
+                                    >
+                                        {content}
+                                    </a>
+                                ) : (
+                                    <div key={cert.id} className="card-surface rounded-2xl p-6">
+                                        {content}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </>
                 )}
 
                 {activeTab === "about" && (

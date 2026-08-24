@@ -1,7 +1,7 @@
 {
     "HomePage": {
         "title": "Hola, soy",
-        "role": "Ingeniero de software y desarrollador Full Stack JavaScript con casi 2 años de experiencia profesional.",
+        "role": "Ingeniero de software y desarrollador Full-Stack con más de 2 años de experiencia profesional.",
         "roles": [
             "Ingeniero de Software",
             "Desarrollador Full Stack JavaScript"
@@ -28,7 +28,7 @@
             "items": {
                 "Name": "Sami Ayachi",
                 "Email": "sami.ayachi.dev@gmail.com",
-                "Experience": "2 Años",
+                "Experience": "2+ Años",
                 "Nationality": "Tunecino",
                 "Freelance": "Disponible",
                 "languages": "Inglés, Francés, Árabe"
@@ -36,11 +36,11 @@
         },
         "experiences": {
             "title": "Mis Experiencias",
-            "description": "Ingeniero de Software con casi 2 años de experiencia profesional en el diseño y desarrollo de plataformas móviles y web. Especializado en React Native y React.js, con experiencia en todo el stack, desde frontends intuitivos hasta servicios backend robustos y despliegues en la nube.",
+            "description": "Ingeniero de Software con más de 2 años de experiencia profesional en el diseño y desarrollo de plataformas móviles y web. Especializado en React Native y React.js, con experiencia en todo el stack, desde frontends intuitivos hasta servicios backend robustos y despliegues en la nube.",
             "items": [
                 {
                     "company": "Kamioun",
-                    "position": "Desarrollador Móvil React Native",
+                    "position": "Desarrollador Full-Stack",
                     "duration": "Agosto 2025 - Presente"
                 },
                 {
@@ -96,7 +96,14 @@
             "skills": "Habilidades",
             "about": "Sobre mí"
         },
-        "sectionLabel": "02 — currículum"
+        "sectionLabel": "02 — currículum",
+        "certifications": {
+            "title": "Certificaciones",
+            "items": [
+                "Microsoft Certified: Azure Fundamentals (AZ-900)",
+                "Microsoft Certified: Azure AI Fundamentals (AI-900)"
+            ]
+        }
     },
     "Work": {
         "projects": [
@@ -125,17 +132,35 @@
                 "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
         ],
-        "sectionLabel": "03 — proyectos de trabajo"
+        "sectionLabel": "03 — proyectos de trabajo",
+        "featured": {
+            "label": "proyecto destacado",
+            "title": "Kamioun — Marketplace B2B Retail",
+            "role": "Desarrollador Full-Stack",
+            "duration": "Ago 2025 – Presente",
+            "summary": "Marketplace B2B que digitaliza el abastecimiento de las tiendas de barrio tunecinas — desde el pedido hasta la entrega y el cobro. Construido originalmente en Magento, migrado a Medusa v2 / Mercur.",
+            "bullets": [
+                "Contribución a la migración Magento → Medusa v2: análisis de los endpoints REST y flujos de pedidos existentes, mapeo a sus equivalentes en Medusa, adaptación de la capa API de la app móvil al nuevo backend.",
+                "Funcionalidades backend en Medusa v2 / Mercur: gestión de repartidores, programa de fidelización, fechas de entrega por proveedor, flujos de pago contra entrega (COD).",
+                "Módulo de confirmación de pedidos y módulo de gestión de anuncios en el OMS (configuración de ubicaciones por arrastrar y soltar, renderizado dinámico en la app del minorista).",
+                "App móvil del minorista (React Native / Expo): catálogo, carrito, checkout, seguimiento de pedidos, fidelización, localización árabe/francés — publicada en Google Play.",
+                "Apps de reparto y preparación de pedidos: rutas optimizadas por proximidad con Google Maps API, estados de entrega, cobro COD, KPIs diarios."
+            ]
+        }
     },
     "PersonalProject": {
         "projects": [
             {
-                "name": "Coding Moon – Juego de Batalla Pokémon 3D",
-                "description": "Un juego de batalla Pokémon 3D basado en navegador que utiliza React y Vite. Sistema de batalla por turnos con ataques y progresión de nivel. Ganador del Coding Moon Challenge 2025."
+                "name": "Coding Moon – Juego de Combate 3D por Turnos",
+                "description": "Un juego de combate 3D por turnos basado en navegador que utiliza React, Vite y Three.js. Sistema de batalla con ataques, puntos de vida y progresión de nivel. Ganador del Coding Moon Challenge 2025."
             },
             {
                 "name": "Sistema de Solicitud de Préstamos Mejorado",
                 "description": "Un microservicio que utiliza Spring Boot integrado con una API de Django para cálculos de préstamos. Frontend receptivo con React, Redux Toolkit y Material-UI. Contenedorizado con Docker y CI/CD con Jenkins."
+            },
+            {
+                "name": "Plataforma E-Learning – Aplicación de Enseñanza en Línea",
+                "description": "Plataforma web para gestionar y explorar contenido educativo, construida con Angular y un backend Laravel. Interfaces responsivas con Bootstrap y Angular Material."
             },
             {
                 "name": "Calculateur Manorga – Estimador de Techo Solar",
