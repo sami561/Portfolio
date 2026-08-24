@@ -33,9 +33,8 @@ const Home = () => {
                     </p>
                     <div className="flex items-center justify-center xl:justify-start gap-4">
                         <a
-                            href="https://drive.google.com/file/d/1yeoKhjNrDLkJJ5Uv3izOyh7oq83-h8Vy/view?usp=sharing"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/sami_ayachi_cv.pdf"
+                            download="Sami_Ayachi_CV.pdf"
                             className="font-mono font-semibold text-sm bg-accent text-accent-foreground px-7 py-4 rounded-[10px] inline-flex items-center gap-2.5 hover:bg-accent-hover transition-colors"
                         >
                             {t("downloadCv")} <span aria-hidden>↓</span>
