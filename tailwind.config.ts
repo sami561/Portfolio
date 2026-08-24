@@ -1,30 +1,14 @@
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
-const addVariablesForColors = ({ addBase, theme }: any) => {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-};
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    './app/services/page.jsx',
-    "./app/resume/page.tsx",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -36,26 +20,37 @@ const config = {
       sm: "640px",
       md: "768px",
       lg: "960px",
-      xl: '1200px',
-      ...defaultTheme.screens, // Merging with the default theme screens if needed
+      xl: "1200px",
+      ...defaultTheme.screens,
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
-      ...defaultTheme.fontFamily, // Merging with the default theme fonts if needed
+      primary: ["var(--font-spaceGrotesk)", "sans-serif"],
+      mono: ["var(--font-jetbrainsMono)", "monospace"],
+      ...defaultTheme.fontFamily,
     },
     extend: {
       colors: {
-        primary: "var(--primary)",
-        "text-color": "var(--text-color)",
-        background: "var(--primary)",
-        foreground: "var(--text-color)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        muted: "var(--muted)",
+        "muted-2": "var(--muted-2)",
+        faint: "var(--faint)",
+        card: "var(--card)",
+        border: "var(--border)",
+        "input-border": "var(--input-border)",
         accent: {
           DEFAULT: "var(--accent)",
           hover: "var(--accent-hover)",
+          foreground: "var(--accent-foreground)",
+          soft: "var(--accent-soft)",
+          "soft-border": "var(--accent-soft-border)",
+          "soft-text": "var(--accent-soft-text)",
         },
+        // legacy aliases still referenced by some components
+        primary: "var(--primary)",
+        "text-color": "var(--text-color)",
         secondary: "var(--secondary)",
-        tertiary: "#151030",
-        ...colors, // Merging with the default tailwind colors
+        ...colors,
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -78,10 +73,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    addVariablesForColors,
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;

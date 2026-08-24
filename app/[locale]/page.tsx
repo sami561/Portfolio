@@ -1,109 +1,90 @@
 "use client";
-import Photo from "@/components/Photo";
-import Socials from "@/components/Socials";
-import Stats from "@/components/Stats";
+import HeroThree from "@/components/HeroThree";
 import Resume from "@/components/Resume";
 import Work from "@/components/Work";
 import PersonalProject from "@/components/PersonalProject";
 import Contact from "@/components/Contact";
-import { ModalTrigger } from "@/components/ui/animated-modal";
-import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
-import { Button } from "@/components/ui/button";
-import { FlipWords } from "@/components/ui/flip-words";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import React, { useState } from "react";
-import { FiDownload } from "react-icons/fi";
-// import { useTranslations } from "next-intl"; // Will be added in refactor step
-
+import React from "react";
 import { useTranslations } from "next-intl";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Home = () => {
-    const [isHovered, setIsHovered] = useState(false);
     const t = useTranslations("HomePage");
-
-    const words = t("role");
-    // next-intl returns array if raw keys are used or if configured, but normally t('key.0') etc.
-    // To get an array, better to use t.raw('roles')?
-    // next-intl 3.x: t('roles') might return string if not array.
-    // Actually, standard t() returns string. To get plain object/array, use useMessages() or t.raw().
-    // Let's use t.raw('roles') but we need to cast it or assume it is array.
-    // Or simply t('roles.0'), t('roles.1') if count is known.
-    // But t.raw('roles') is cleaner.
-    const word = t.raw("roles") as string[];
 
     return (
         <>
-            <section id="home" className="h-full mb-12 xl:mb-24">
-                <div className="container mx-auto h-full relative z-10">
-                    <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-                        <div className="text-center xl:text-left order-2 xl:order-none">
-                            <FlipWords words={word} />
-                            <h1 className="h1 my-6">
-                                {t("title")} <br />{" "}
-                                <span className="text-accent"> Sami Ayachi</span>
-                            </h1>
-                            <div className="max-w-[600px] mb-9 ">
-                                <TextGenerateEffect words={words} />
-                            </div>
-                            <div className="flex flex-row gap-5 justify-center align-middle">
-                                <a
-                                    href="https://drive.google.com/file/d/1yeoKhjNrDLkJJ5Uv3izOyh7oq83-h8Vy/view?usp=sharing"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        size="lg"
-                                        className="uppercase flex items-center gap-2 w-[16rem] h-12"
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}
-                                    >
-                                        {isHovered ? (
-                                            <FiDownload className="text-xl" />
-                                        ) : (
-                                            <span className="uppercase flex items-center gap-2">
-                                                <span>{t("downloadCv")}</span>
-                                                <FiDownload className="text-xl" />
-                                            </span>
-                                        )}
-                                    </Button>
-                                </a>
-
-                                <div className="flex align-middle xl:mb-0 mt-2 pb-5">
-                                    <Socials
-                                        containerStyles="flex gap-6"
-                                        iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="order-1 xl:order-none mb-8 xl:mb-0">
-                            <Photo />
-                        </div>
+            {/* Hero */}
+            <section
+                id="home"
+                className="grid grid-cols-1 xl:grid-cols-2 items-center gap-10 px-6 xl:px-14 pt-16 xl:pt-[100px] pb-20 xl:pb-[120px] min-h-[640px]"
+            >
+                <div className="order-2 xl:order-none text-center xl:text-left">
+                    <div className="font-mono text-accent text-[15px] tracking-[0.04em] mb-5 flex items-center justify-center xl:justify-start gap-2.5">
+                        <span className="w-2 h-2 rounded-full bg-accent animate-pulseDot" />
+                        {t("tagline")}
+                    </div>
+                    <h1 className="h1 mb-6">
+                        {t("title")}
+                        <br />
+                        <span className="text-accent">Sami Ayachi</span>
+                    </h1>
+                    <p className="text-[19px] leading-relaxed text-muted max-w-[480px] mx-auto xl:mx-0 mb-9">
+                        {t("role")}
+                    </p>
+                    <div className="flex items-center justify-center xl:justify-start gap-4">
+                        <a
+                            href="https://drive.google.com/file/d/1yeoKhjNrDLkJJ5Uv3izOyh7oq83-h8Vy/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-mono font-semibold text-sm bg-accent text-accent-foreground px-7 py-4 rounded-[10px] inline-flex items-center gap-2.5 hover:bg-accent-hover transition-colors"
+                        >
+                            {t("downloadCv")} <span aria-hidden>↓</span>
+                        </a>
+                        <a
+                            href="https://github.com/sami561"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                            className="w-12 h-12 border border-input-border rounded-[10px] flex items-center justify-center text-foreground hover:border-accent hover:text-accent transition-colors"
+                        >
+                            <FaGithub size={20} />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/sami-ayachi/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            className="w-12 h-12 border border-input-border rounded-[10px] flex items-center justify-center text-foreground hover:border-accent hover:text-accent transition-colors"
+                        >
+                            <FaLinkedinIn size={20} />
+                        </a>
                     </div>
                 </div>
-                {/* <Stats /> */}
+                <div className="order-1 xl:order-none flex justify-center items-center">
+                    <HeroThree />
+                </div>
             </section>
 
-            <section id="resume" className="mb-12 xl:mb-24">
+            {/* Resume */}
+            <section id="resume" className="px-6 xl:px-14 pt-10 pb-20 xl:pb-[120px]">
                 <Resume />
             </section>
 
-            <section id="work" className="mb-12 xl:mb-24">
-                <div className="container mx-auto mb-8">
-                    <h2 className="h2 text-center xl:text-left text-primary">{t("workProjects")}</h2>
-                </div>
+            {/* Work projects */}
+            <section id="work" className="px-6 xl:px-14 pt-10 pb-20 xl:pb-[120px]">
                 <Work />
             </section>
 
-            <section id="personal-project" className="mb-12 xl:mb-24">
-                <div className="container mx-auto mb-8">
-                    <h2 className="h2 text-center xl:text-left text-primary">{t("personalProjects")}</h2>
-                </div>
+            {/* Personal project */}
+            <section
+                id="personal-project"
+                className="px-6 xl:px-14 pt-10 pb-20 xl:pb-[120px]"
+            >
                 <PersonalProject />
             </section>
 
-            <section id="contact" className="mb-12 xl:mb-24">
+            {/* Contact */}
+            <section id="contact" className="px-6 xl:px-14 pt-10 pb-24 xl:pb-[140px]">
                 <Contact />
             </section>
         </>

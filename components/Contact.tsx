@@ -1,38 +1,33 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { SelectLabel } from "@radix-ui/react-select";
 import { useForm } from "react-hook-form";
-import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { sendMail } from "@/lib/mail";
 import { useTranslations } from "next-intl";
 
+const inputClasses =
+    "font-mono text-sm bg-background border border-input-border rounded-[10px] p-4 text-foreground w-full outline-none focus:border-accent transition-colors";
+
 const Contact = () => {
     const t = useTranslations("Contact");
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const info = [
-        { icon: <FaPhoneAlt />, text: " +216 28 699 806", title: t("info.phone") },
         {
-            icon: <FaEnvelope />,
+            icon: <FaPhoneAlt size={18} />,
+            text: "+216 28 699 806",
+            title: t("info.phone"),
+        },
+        {
+            icon: <FaEnvelope size={18} />,
             text: "sami.ayachi.dev@gmail.com",
             title: t("info.email"),
         },
-        { icon: <FaMapMarkerAlt />, text: "Tunisia, Sousse", title: t("info.address") },
+        {
+            icon: <FaMapMarkerAlt size={18} />,
+            text: "Tunisia, Sousse",
+            title: t("info.address"),
+        },
     ];
 
     const sendMailer = async (data: any) => {
@@ -43,82 +38,77 @@ const Contact = () => {
             body: data.message,
         });
     };
+
     return (
-        <motion.div className="py-6">
-            <div className="container mx-auto">
-                <div className="flex flex-col  xl:flex-row gap-[30px]">
-                    <div className="xl:h-[54%] order-2 xl:order-none ">
-                        <form
-                            onSubmit={handleSubmit(sendMailer)}
-                            className="flex flex-col gap-6 p-10 bg-secondary rounded-xl"
-                        >
-                            <h3 className="text-4xl text-accent">{t("title")}</h3>
-                            <p className=" text-primary/60">
-                                {t("description")}
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input
-                                    type="firstName"
-                                    placeholder={t("placeholders.firstName")}
-                                    {...register("firstName")}
-                                />
-                                <Input
-                                    type="lastName"
-                                    placeholder={t("placeholders.lastName")}
-                                    {...register("Lastname")}
-                                />
-                                <Input
-                                    type="email"
-                                    placeholder={t("placeholders.email")}
-                                    {...register("Email")}
-                                />
-                                <Input
-                                    type="phone"
-                                    placeholder={t("placeholders.phone")}
-                                    {...register("Phone")}
-                                />
-                            </div>
-                            {/*  <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service " />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service </SelectLabel>
-                    <SelectLabel>Web Development </SelectLabel>
-                    <SelectLabel>UI/UX </SelectLabel>
-                    <SelectLabel>Logo Design </SelectLabel>
-                  </SelectGroup>
-                </SelectContent>
-              </Select> */}
-                            <Textarea
-                                className="h-[200px] "
-                                placeholder={t("placeholders.message")}
-                                {...register("message")}
-                            />
-                            <Button size="lg">{t("button")}</Button>
-                        </form>
+        <div className="grid grid-cols-1 xl:grid-cols-[1.4fr_1fr] gap-8 min-w-0">
+            {/* Form card */}
+            <div className="min-w-0 card-surface rounded-[20px] p-8 xl:p-12">
+                <h2 className="text-[28px] xl:text-4xl font-bold text-accent mb-4">
+                    {t("title")}
+                </h2>
+                <p className="text-base leading-[1.6] text-muted mb-8 max-w-[520px]">
+                    {t("description")}
+                </p>
+                <form onSubmit={handleSubmit(sendMailer)}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <input
+                            className={inputClasses}
+                            placeholder={t("placeholders.firstName")}
+                            {...register("firstName")}
+                        />
+                        <input
+                            className={inputClasses}
+                            placeholder={t("placeholders.lastName")}
+                            {...register("Lastname")}
+                        />
+                        <input
+                            type="email"
+                            className={inputClasses}
+                            placeholder={t("placeholders.email")}
+                            {...register("Email")}
+                        />
+                        <input
+                            className={inputClasses}
+                            placeholder={t("placeholders.phone")}
+                            {...register("Phone")}
+                        />
                     </div>
-                    <div className="flex-1 flex  items-center xl justify-end oder-1 xl:order-none mb-8 xl:mb-2">
-                        <ul className="flex flex-col gap-10 ">
-                            {info.map((item, index) => {
-                                return (
-                                    <li key={index} className="flex items-center gap-6">
-                                        <div className="w-[42px] h-[42px] xl:h-[62px] xl:w-[62px] bg-secondary text-accent rounded-md flex items-center justify-center gap-5 ">
-                                            <div className="text-[28px]">{item.icon}</div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-primary/60">{item.title}</p>
-                                            <h3 className="text-xl">{item.text}</h3>
-                                        </div>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
+                    <textarea
+                        className={`${inputClasses} h-[130px] resize-none mb-5`}
+                        placeholder={t("placeholders.message")}
+                        {...register("message")}
+                    />
+                    <button
+                        type="submit"
+                        className="w-full font-mono font-semibold text-[15px] bg-accent text-accent-foreground py-[18px] rounded-full hover:bg-accent-hover transition-colors"
+                    >
+                        {t("button")}
+                    </button>
+                </form>
             </div>
-        </motion.div>
+
+            {/* Info cards */}
+            <div className="flex flex-col gap-4 min-w-0">
+                {info.map((item, index) => (
+                    <div
+                        key={index}
+                        className="card-surface rounded-2xl p-[26px] flex items-center gap-[18px] min-w-0"
+                    >
+                        <div className="w-[46px] h-[46px] rounded-xl bg-accent-soft flex items-center justify-center shrink-0 text-accent">
+                            {item.icon}
+                        </div>
+                        <div className="min-w-0">
+                            <div className="font-mono text-[13px] text-muted mb-1">
+                                {item.title}
+                            </div>
+                            <div className="text-base font-semibold break-words">
+                                {item.text}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 

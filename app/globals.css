@@ -4,33 +4,61 @@
 
 @layer base {
   :root {
-    --primary: #ffffff;
-    --text-color: #1c1c22;
-    --accent: #4682B4;
-    --accent-hover: #5A9BD3;
-    --secondary: #f5f5f5;
+    /* Light design system (matches standalone page) */
+    --background: oklch(97% 0.005 250);
+    --foreground: oklch(18% 0.006 250);
+    --muted: oklch(42% 0.012 250);
+    --muted-2: oklch(50% 0.012 250);
+    --faint: oklch(55% 0.02 250);
+    --card: oklch(100% 0 0);
+    --border: oklch(88% 0.012 250);
+    --input-border: oklch(82% 0.012 250);
+    --accent: oklch(48% 0.15 155);
+    --accent-hover: oklch(38% 0.15 155);
+    --accent-foreground: oklch(99% 0.01 155);
+    --accent-soft: oklch(93% 0.04 155);
+    --accent-soft-border: oklch(70% 0.08 155);
+    --accent-soft-text: oklch(38% 0.12 155);
+    --stripe-a: oklch(93% 0.008 250);
+    --stripe-b: oklch(90% 0.008 250);
+    --chat-bubble: oklch(93% 0.008 250);
+
+    /* legacy aliases used across components */
+    --primary: var(--card);
+    --text-color: var(--foreground);
+    --secondary: var(--card);
   }
 
+  /* The design commits to a single light look */
   .dark {
-    --primary: #1c1c22;
-    --text-color: #ffffff;
-    --accent: #00ff99;
-    --accent-hover: #00e187;
-    --secondary: #232329;
+    --background: oklch(97% 0.005 250);
+    --foreground: oklch(18% 0.006 250);
+    --primary: var(--card);
+    --text-color: var(--foreground);
+    --secondary: var(--card);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply font-primary bg-primary text-primary leading-loose;
-    background-color: var(--primary);
-    color: var(--text-color);
+    @apply font-primary;
+    background: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+
+  ::placeholder {
+    color: var(--faint);
   }
 
   .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+    @apply text-[48px] xl:text-[68px] leading-[1.05] font-bold;
   }
 
   .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+    @apply text-[32px] xl:text-[42px] leading-[1.1] font-bold;
   }
 
   .h3 {
@@ -46,96 +74,62 @@
   }
 }
 
+@layer utilities {
+  .section-label {
+    @apply font-mono text-accent text-sm mb-2.5;
+  }
+
+  .card-surface {
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+
+  .striped-placeholder {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--stripe-a) 0px,
+      var(--stripe-a) 12px,
+      var(--stripe-b) 12px,
+      var(--stripe-b) 24px
+    );
+  }
+
+  .nav-blur {
+    background: oklch(97% 0.005 250 / 0.85);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-floatY {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.animate-pulseDot {
+  animation: pulseDot 1.6s ease-in-out infinite;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
   display: block;
-}
-
-.black-gradient {
-  background: #000000;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right,
-      #434343,
-      #000000);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right,
-      #434343,
-      #000000);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(-90deg,
-      #804dee 0%,
-      rgba(60, 51, 80, 0) 100%);
-}
-
-.green-pink-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-}
-
-.orange-text-gradient {
-  background: #f12711;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,
-      #f12711,
-      #f5af19);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,
-      #f12711,
-      #f5af19);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.green-text-gradient {
-  background: #11998e;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,
-      #11998e,
-      #38ef7d);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,
-      #11998e,
-      #38ef7d);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.blue-text-gradient {
-  /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #56ccf2;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,
-      #2f80ed,
-      #56ccf2);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,
-      #2f80ed,
-      #56ccf2);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.pink-text-gradient {
-  background: #ec008c;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,
-      #ec008c,
-      #fc6767);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,
-      #ec008c,
-      #fc6767);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

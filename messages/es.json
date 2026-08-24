@@ -8,7 +8,8 @@
         ],
         "downloadCv": "Descargar CV",
         "workProjects": "Proyectos Laborales",
-        "personalProjects": "Proyectos Personales"
+        "personalProjects": "Proyectos Personales",
+        "tagline": "desarrollador javascript full stack"
     },
     "Header": {
         "contactMe": "Contáctame"
@@ -94,7 +95,8 @@
             "education": "Educación",
             "skills": "Habilidades",
             "about": "Sobre mí"
-        }
+        },
+        "sectionLabel": "02 — currículum"
     },
     "Work": {
         "projects": [
@@ -122,7 +124,8 @@
                 "title": "Order Management System",
                 "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
-        ]
+        ],
+        "sectionLabel": "03 — proyectos de trabajo"
     },
     "PersonalProject": {
         "projects": [
@@ -156,5 +159,25 @@
             "email": "Correo",
             "address": "dirección"
         }
+    },
+    "PersonalSection": {
+        "label": "proyecto personal",
+        "title": "E-Citoyen — una plataforma de gobierno electrónico",
+        "description": "Desarrollo de interfaces web responsivas con React.js y Next.js, notificaciones en tiempo real con Socket.io y diseño de un sistema de colas programadas basado en Redis."
+    },
+    "Footer": {
+        "text": "© 2026 Sami Ayachi. Hecho con Next.js & three.js."
+    },
+    "Chat": {
+        "title": "Pregunta sobre Sami",
+        "greeting": "¡Hola! Estoy aquí para responder preguntas sobre la experiencia, los proyectos y las habilidades de Sami. Pregúntame lo que quieras.",
+        "thinking": "pensando…",
+        "placeholder": "Haz una pregunta…",
+        "fallback": "Tengo problemas de conexión en este momento — contacta a Sami directamente en sami.ayachi.dev@gmail.com.",
+        "suggestions": [
+            "¿En qué ha trabajado Sami?",
+            "¿Cuáles son sus habilidades?",
+            "¿Cómo lo contacto?"
+        ]
     }
 }

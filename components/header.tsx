@@ -1,41 +1,34 @@
 "use client";
-import React, { useState } from "react";
-// import Link from "next/link"; // Removed in favor of @/navigation
+import React from "react";
 import Nav from "./Nav";
-import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
-import { AiFillPhone } from "react-icons/ai";
-import { ThemeToggle } from "./ThemeToggle";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Link } from "@/navigation";
 
 const Header = () => {
-  const [hovered, setHovered] = useState(false);
   const t = useTranslations("Header");
 
   return (
-    <header className="py-8 xl:py-12 ">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="sticky top-0 z-40 nav-blur border-b border-border">
+      <div className="flex items-center justify-between px-6 xl:px-14 py-[22px]">
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
-            Sami <span className="text-accent">.</span>
-          </h1>
+          <span className="font-mono font-semibold text-[22px] leading-none">
+            sami<span className="text-accent">.</span>dev
+          </span>
         </Link>
         {/* Desktop nav */}
-        <div className="hidden xl:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-10">
           <Nav />
-          <Link href="/#contact">
-            <Button
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              className={`${hovered && "text-primary"} transition-all duration-500`}
-            >
-              {t("contactMe")}
-            </Button>
-          </Link>
-          <ThemeToggle />
+        </div>
+        <div className="hidden xl:flex items-center gap-4">
           <LanguageSwitcher />
+          <Link
+            href="/#contact"
+            className="font-mono text-[13px] font-semibold bg-accent text-accent-foreground px-[22px] py-[11px] rounded-full hover:bg-accent-hover transition-colors"
+          >
+            {t("contactMe")}
+          </Link>
         </div>
         {/* Mobile nav */}
         <div className="xl:hidden">

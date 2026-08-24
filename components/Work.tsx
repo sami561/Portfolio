@@ -1,183 +1,88 @@
 "use client";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Link from "next/link";
 import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import { FaGithub } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 
 const projectsConfig = [
     {
-        num: "01",
-        stack: [
-            { name: "Redux" },
-            { name: "ReduxSaga" },
-            { name: "Next.js" },
-            { name: "React.js" },
-            { name: "Express" },
-            { name: "MongoDB" },
-            { name: "Redis" },
-        ],
-        image: "/assets/Project01/e-citoyen.png",
-        live: "https://e-citoyen.tn/",
-        github: "",
-    },
-    {
-        num: "02",
-        stack: [
-            { name: "ReactJS" },
-            { name: "Django" },
-            { name: "Next.js" },
-            { name: "ApexCharts" },
-            { name: "NumPy" },
-            { name: "Git" },
-            { name: "GitLab" },
-        ],
-        image: "/assets/Project02/wide.png",
-        live: "http://appflow.wide.tn:3001/",
-        github: "",
-    },
-    {
-        num: "03",
-        stack: [
-            { name: "React Native" },
-            { name: "TypeScript" },
-            { name: "Redux" }
-        ],
-        image: "/assets/kamioun.png",
-        live: "",
-        github: "",
-    },
-    {
-        num: "04",
-        stack: [
-            { name: "ReactJS" },
-            { name: "Next.js" },
-            { name: "Tailwind CSS" }
-        ],
+        tags: ["Spring Boot", "Django", "Redux Toolkit", "Docker", "Jenkins", "react"],
         image: "/assets/Project01/dashboardLight.png",
-        live: "",
-        github: "",
+        link: "https://github.com/sami561/Loan-Application-Repo.git",
+    },
+    {
+        tags: ["Laravel", "Angular", "SQL"],
+        image: "/assets/Project01/add.png",
+        link: "https://github.com/sami561/e-learning-website.git",
+    },
+    {
+        tags: ["react", "maps-api", "weather-api"],
+        image: "/assets/manorga.png",
+        link: "https://github.com/sami561/calculator-manorga.git",
     },
 ];
 
 const Work = () => {
     const t = useTranslations("Work");
-    // Merge static config with translations
+    const tHome = useTranslations("HomePage");
+    const tPersonal = useTranslations("PersonalProject");
+
     const projects = projectsConfig.map((item, index) => ({
         ...item,
-        category: t(`projects.${index}.category`),
-        title: t(`projects.${index}.title`),
-        description: t(`projects.${index}.description`),
+        title: tPersonal(`projects.${index}.name`),
+        description: tPersonal(`projects.${index}.description`),
     }));
 
-    const [project, setProject] = useState(projects[0]);
-    const handelslidechange = (swiper: any) => {
-        const currentIndex = swiper.activeIndex;
-        setProject(projects[currentIndex]);
-    };
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 1,
-                transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-            }}
-            className="min-h-[80vh] flex  flex-col justify-center py-12 xl:px-0"
-        >
-            <div className="container mx-auto">
-                <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-                    <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none ">
-                        <div className="flex flex-col gap-[30px]  h-[50%]">
-                            <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                                {project.num}
+        <div>
+            <div className="section-label">{t("sectionLabel")}</div>
+            <h2 className="h2 mb-12">{tHome("workProjects")}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="card-surface rounded-[18px] overflow-hidden flex flex-col"
+                    >
+                        <div className="h-[180px] relative striped-placeholder">
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                className="object-cover"
+                            />
+                            {project.link && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Source code"
+                                    className="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-background flex items-center justify-center text-foreground hover:text-accent transition-colors"
+                                >
+                                    <FaGithub size={16} />
+                                </a>
+                            )}
+                        </div>
+                        <div className="p-[26px] flex flex-col gap-3.5 flex-1">
+                            <div className="text-[19px] font-semibold leading-[1.3]">
+                                {project.title}
                             </div>
-                            <h2 className="text-[42px] font-bold leading-none text-text-color groupe-hover:text-accent transition-all duration-500 capitalize">
-                                {project.category}
-                            </h2>
-                            <p className="text-text-color/60">{project.description}</p>
-                            <ul className="flex flex-row items-start w-[50%]">
-                                {project.stack.map((item, index) => {
-                                    return (
-                                        <li key={index} className="text-xl text-accent">
-                                            {item.name}
-                                            {index !== project.stack.length - 1 && ","}
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                            <div className="border border-primary/20"></div>
-                            <div className=" flex items-center gap-4">
-                                <Link href={project.live}>
-                                    <TooltipProvider delayDuration={100}>
-                                        <Tooltip>
-                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-primary/5 flex justify-center items-center group ">
-                                                <BsArrowUpRight className="text-primary text-3xl group-hover:text-accent" />
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                <p>live project </p>
-                                            </TooltipContent>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                </Link>
-                                {/*   <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-primary/5 flex justify-center items-center group ">
-                        <BsGithub className="text-primary text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>GitHub Repository </p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link> */}
+                            <div className="text-[14.5px] leading-[1.6] text-muted flex-1">
+                                {project.description}
+                            </div>
+                            <div className="flex flex-wrap gap-2 mt-1">
+                                {project.tags.map((tag) => (
+                                    <span
+                                        key={tag}
+                                        className="font-mono text-xs text-accent"
+                                    >
+                                        #{tag}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                     </div>
-                    <div className="w-full xl:w-[50%]">
-                        <Swiper
-                            spaceBetween={30}
-                            slidesPerView={1}
-                            className="xl:h-[520px] mb-12 bg-red"
-                            onSlideChange={handelslidechange}
-                        >
-                            {projects.map((project, index) => {
-                                return (
-                                    <SwiperSlide key={index} className="w-full">
-                                        <div className="h-[460px] relative group justify-center items-center bg-pink-50/20">
-                                            <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                                            <div className="relative w-full  h-full  ">
-                                                <Image
-                                                    src={project.image}
-                                                    fill
-                                                    /*    className="object-cover" */
-                                                    alt="project image"
-                                                />
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                );
-                            })}
-                            <WorkSliderBtns
-                                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
-                                btnStyles="bg-accent hover:bg-accent-hover text-primary  text-[22px] w-[44px] h-[44px] flex justify-center  items-center "
-                                iconsStyles=""
-                            />
-                        </Swiper>
-                    </div>
-                </div>
+                ))}
             </div>
-        </motion.div>
+        </div>
     );
 };
 

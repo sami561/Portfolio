@@ -8,7 +8,8 @@
         ],
         "downloadCv": "Download CV",
         "workProjects": "Work Projects",
-        "personalProjects": "Personal Projects"
+        "personalProjects": "Personal Projects",
+        "tagline": "full stack javascript developer"
     },
     "Header": {
         "contactMe": "Contact Me"
@@ -94,7 +95,8 @@
             "education": "Education",
             "skills": "Skills",
             "about": "About me"
-        }
+        },
+        "sectionLabel": "02 — resume"
     },
     "Work": {
         "projects": [
@@ -122,7 +124,8 @@
                 "title": "Order Management System",
                 "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
-        ]
+        ],
+        "sectionLabel": "03 — work projects"
     },
     "PersonalProject": {
         "projects": [
@@ -156,5 +159,25 @@
             "email": "Email",
             "address": "address"
         }
+    },
+    "PersonalSection": {
+        "label": "personal project",
+        "title": "E-Citoyen — an e-government platform",
+        "description": "Developed responsive web interfaces using React.js and Next.js, implemented real-time notifications with Socket.io, and designed a Redis-based scheduled queue system."
+    },
+    "Footer": {
+        "text": "© 2026 Sami Ayachi. Built with Next.js & three.js."
+    },
+    "Chat": {
+        "title": "Ask about Sami",
+        "greeting": "Hi! I'm here to answer questions about Sami's experience, projects, and skills. Ask me anything.",
+        "thinking": "thinking…",
+        "placeholder": "Ask a question…",
+        "fallback": "I'm having trouble connecting right now — try reaching Sami directly at sami.ayachi.dev@gmail.com.",
+        "suggestions": [
+            "What has Sami worked on?",
+            "What are his main skills?",
+            "How do I contact him?"
+        ]
     }
 }

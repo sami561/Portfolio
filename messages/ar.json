@@ -8,7 +8,8 @@
         ],
         "downloadCv": "تحميل السيرة الذاتية",
         "workProjects": "مشاريع العمل",
-        "personalProjects": "مشاريع شخصية"
+        "personalProjects": "مشاريع شخصية",
+        "tagline": "مطور جافاسكريبت متكامل"
     },
     "Header": {
         "contactMe": "اتصل بي"
@@ -94,7 +95,8 @@
             "education": "التعليم",
             "skills": "المهارات",
             "about": "عني"
-        }
+        },
+        "sectionLabel": "02 — السيرة الذاتية"
     },
     "Work": {
         "projects": [
@@ -122,7 +124,8 @@
                 "title": "نظام إدارة الطلبات",
                 "description": "Built a comprehensive order management system to streamline operations for Kamioun."
             }
-        ]
+        ],
+        "sectionLabel": "03 — مشاريع العمل"
     },
     "PersonalProject": {
         "projects": [
@@ -156,5 +159,25 @@
             "email": "البريد",
             "address": "العنوان"
         }
+    },
+    "PersonalSection": {
+        "label": "مشروع شخصي",
+        "title": "E-Citoyen — منصة حكومة إلكترونية",
+        "description": "تطوير واجهات ويب متجاوبة باستخدام React.js و Next.js، وتنفيذ إشعارات فورية عبر Socket.io، وتصميم نظام طوابير مجدولة يعتمد على Redis."
+    },
+    "Footer": {
+        "text": "© 2026 سامي عياشي. صُنع باستخدام Next.js و three.js."
+    },
+    "Chat": {
+        "title": "اسأل عن سامي",
+        "greeting": "مرحباً! أنا هنا للإجابة عن أسئلتك حول خبرة سامي ومشاريعه ومهاراته. اسألني ما تشاء.",
+        "thinking": "جارٍ التفكير…",
+        "placeholder": "اطرح سؤالاً…",
+        "fallback": "أواجه مشكلة في الاتصال حالياً — تواصل مع سامي مباشرة على sami.ayachi.dev@gmail.com.",
+        "suggestions": [
+            "على ماذا عمل سامي؟",
+            "ما هي مهاراته؟",
+            "كيف أتواصل معه؟"
+        ]
     }
 }
