@@ -11,7 +11,7 @@ const PersonalProject: React.FC = () => {
         <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.2fr] gap-10 xl:gap-14 items-center">
             <div>
                 <div className="font-mono text-accent text-[60px] font-bold mb-2 leading-none">
-                    01
+                    03
                 </div>
                 <div className="section-label">{t("label")}</div>
                 <h2 className="text-[30px] xl:text-[38px] font-bold leading-[1.2] mb-6">
