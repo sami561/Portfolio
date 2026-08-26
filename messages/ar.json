@@ -7,8 +7,8 @@
             "مطور جافا سكريبت شامل"
         ],
         "downloadCv": "تحميل السيرة الذاتية",
-        "workProjects": "مشاريع العمل",
-        "personalProjects": "مشاريع شخصية",
+        "workProjects": "المشاريع المهنية",
+        "personalProjects": "المشاريع الشخصية",
         "tagline": "مطور جافاسكريبت متكامل"
     },
     "Header": {
@@ -108,31 +108,31 @@
     "Work": {
         "projects": [
             {
-                "num": "01",
-                "category": "مشروع الحكومة الإلكترونية e-Citoyen",
-                "title": "مشروع 01",
-                "description": "تطوير واجهات ويب سريعة الاستجابة باستخدام React.js و Next.js، وتطبيق الإشعارات في الوقت الفعلي باستخدام Socket.io، وتصميم نظام طابور يعتمد على Redis."
+                "title": "e-Citoyen — منصة الحكومة الإلكترونية التونسية",
+                "company": "Arsela Technologies · مطور Full-Stack",
+                "period": "فبراير 2024 – سبتمبر 2024",
+                "description": "بناء واجهة منصة خدمات حكومية رقمية باستخدام React و Next.js، مع واجهات متجاوبة وسهلة الوصول، وإشعارات فورية عبر Socket.io، ونظام مهام مجدولة يعتمد على Redis."
             },
             {
-                "num": "02",
-                "category": "WIDE: حل للتكنولوجيا المالية",
-                "title": "مشروع 02",
-                "description": "إعادة تصميم وتحسين واجهة المستخدم باستخدام React/Next.js و Tailwind CSS، وتطوير Django REST API مع حسابات الرهن العقاري القائمة على NumPy."
+                "title": "Wide — منصة تقدير العقارات والقروض",
+                "company": "Arsela Technologies · تدريب صيفي",
+                "period": "يونيو 2023 – سبتمبر 2023",
+                "description": "إعادة تصميم واجهة منصة Wide، وتحويل التصاميم إلى مكونات React قابلة لإعادة الاستخدام مع Tailwind CSS، وبناء REST API باستخدام Django لحسابات وتقديرات العقارات."
             },
             {
-                "num": "03",
-                "category": "تطبيق جوال",
-                "title": "تطبيق كميون",
-                "description": "Developed features for the prominent Kamioun mobile application as a React Native developer."
+                "title": "Kamioun — لوحة تحكم تشغيلية وخدمة طلبات مصغّرة",
+                "company": "Kamioun · تدريب نهاية الدراسة",
+                "period": "فبراير 2025 – يوليو 2025",
+                "description": "تصميم لوحة تحكم React لمتابعة الطلبات والمخزون ومؤشرات الأداء، وخدمة Node.js/Express لمعالجة الطلبات وإدارة المنتجات، وإعداد CI/CD عبر Jenkins مع Docker."
             },
             {
-                "num": "04",
-                "category": "لوحة تحكم داخلية",
-                "title": "نظام إدارة الطلبات",
-                "description": "Built a comprehensive order management system to streamline operations for Kamioun."
+                "title": "Reactit — لوحات تحكم ومكتبة مكونات",
+                "company": "Reactit · تدريب نهاية الدراسة",
+                "period": "فبراير 2022 – يونيو 2022",
+                "description": "بناء لوحات تحكم ومكتبة مكونات قابلة لإعادة الاستخدام باستخدام React و Material UI و Redux، وواجهات موبايل React Native، وخدمات خلفية Node.js/Express للمستخدمين والفئات والضمانات وعروض الأسعار."
             }
         ],
-        "sectionLabel": "04 — مشاريع العمل",
+        "sectionLabel": "03 — المشاريع المهنية",
         "featured": {
             "label": "مشروع رئيسي",
             "title": "كميون — سوق B2B للتجزئة",
@@ -149,22 +149,19 @@
         }
     },
     "PersonalProject": {
+        "sectionLabel": "04 — المشاريع الشخصية",
         "projects": [
             {
                 "name": "Coding Moon – لعبة قتال ثلاثية الأبعاد بنظام الأدوار",
-                "description": "لعبة قتال ثلاثية الأبعاد بنظام الأدوار تعمل على المتصفح باستخدام React و Vite و Three.js. الفائز في تحدي Coding Moon 2025."
+                "description": "لعبة ويب ثلاثية الأبعاد مبنية بـ React و Vite: نظام قتال بالأدوار، إدارة نقاط الصحة، جمع العملات وتقدّم المستويات. الفائزة بتحدي Coding Moon 2025 – EPI."
             },
             {
-                "name": "نظام طلب القروض المطور",
-                "description": "خدمة مصغرة باستخدام Spring Boot متكاملة مع Django API لحسابات القروض. واجهة أمامية مستجيبة مع React و Redux Toolkit و Material-UI."
+                "name": "منصة تعليم إلكتروني – تطبيق تدريس عبر الإنترنت",
+                "description": "منصة تدريس عبر الإنترنت مبنية بـ Angular لإدارة وتصفح المحتوى التعليمي، بواجهات متجاوبة باستخدام Bootstrap و Angular Material على خلفية Laravel."
             },
             {
-                "name": "منصة التعلم الإلكتروني – تطبيق للتدريس عبر الإنترنت",
-                "description": "منصة ويب لإدارة وتصفح المحتوى التعليمي، مبنية بـ Angular وواجهة خلفية Laravel. واجهات متجاوبة باستخدام Bootstrap و Angular Material."
-            },
-            {
-                "name": "Calculateur Manorga – تقدير سقف الطاقة الشمسية",
-                "description": "تطبيق ويب باستخدام React يقدر عدد الألواح الشمسية التي يمكن وضعها على سطح المستخدم. تكامل بيانات الطقس وخرائط جوجل."
+                "name": "Manorga – مقدّر الألواح الشمسية",
+                "description": "تطبيق React يقدّر سعة تركيب الألواح الشمسية على السطح باستخدام بيانات خرائط Google والطقس."
             }
         ]
     },
@@ -184,11 +181,6 @@
             "email": "البريد",
             "address": "العنوان"
         }
-    },
-    "PersonalSection": {
-        "label": "مشروع شخصي",
-        "title": "E-Citoyen — منصة حكومة إلكترونية",
-        "description": "تطوير واجهات ويب متجاوبة باستخدام React.js و Next.js، وتنفيذ إشعارات فورية عبر Socket.io، وتصميم نظام طوابير مجدولة يعتمد على Redis."
     },
     "Footer": {
         "text": "© 2026 سامي عياشي. صُنع باستخدام Next.js و three.js."

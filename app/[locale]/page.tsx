@@ -69,17 +69,17 @@ const Home = () => {
                 <Resume />
             </section>
 
-            {/* Personal project */}
+            {/* Work projects */}
+            <section id="work" className="px-6 xl:px-14 pt-10 pb-20 xl:pb-[120px]">
+                <Work />
+            </section>
+
+            {/* Personal projects */}
             <section
                 id="personal-project"
                 className="px-6 xl:px-14 pt-10 pb-20 xl:pb-[120px]"
             >
                 <PersonalProject />
-            </section>
-
-            {/* Work projects */}
-            <section id="work" className="px-6 xl:px-14 pt-10 pb-20 xl:pb-[120px]">
-                <Work />
             </section>
 
             {/* Contact */}

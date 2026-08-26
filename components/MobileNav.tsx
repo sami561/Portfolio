@@ -13,8 +13,8 @@ const MobileNav = () => {
   const links = [
     { name: t("home"), path: "/#home" },
     { name: t("resume"), path: "/#resume" },
-    { name: t("projects"), path: "/#personal-project" },
     { name: t("work"), path: "/#work" },
+    { name: t("projects"), path: "/#personal-project" },
     { name: t("contact"), path: "/#contact" },
   ];
 
