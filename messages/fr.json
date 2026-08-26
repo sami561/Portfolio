@@ -7,8 +7,8 @@
             "Développeur Full Stack JavaScript"
         ],
         "downloadCv": "Télécharger CV",
-        "workProjects": "Projets Professionnels",
-        "personalProjects": "Projets Personnels",
+        "workProjects": "Projets professionnels",
+        "personalProjects": "Projets personnels",
         "tagline": "développeur javascript full stack"
     },
     "Header": {
@@ -108,31 +108,31 @@
     "Work": {
         "projects": [
             {
-                "num": "01",
-                "category": "e-Citoyen est un projet e-gouvernement",
-                "title": "projet 01",
-                "description": "Développement d'interfaces web réactives avec React.js et Next.js, implémentation de notifications en temps réel avec Socket.io et conception d'un système de file d'attente Redis."
+                "title": "e-Citoyen — Plateforme e-gouvernement tunisienne",
+                "company": "Arsela Technologies · Développeur Full-Stack",
+                "period": "Fév 2024 – Sep 2024",
+                "description": "Développement du frontend d'une plateforme de services publics numériques avec React et Next.js. Interfaces responsives et accessibles, notifications en temps réel avec Socket.io et système de tâches planifiées basé sur Redis."
             },
             {
-                "num": "02",
-                "category": "WIDE : Solution Fintech pour prêts et immobilier",
-                "title": "projet 02",
-                "description": "Refonte et amélioration de l'interface utilisateur avec React/Next.js et Tailwind CSS, et développement d'une API REST Django avec calculs hypothécaires basés sur NumPy."
+                "title": "Wide — Plateforme d'estimation immobilière et de prêts",
+                "company": "Arsela Technologies · Stage d'été",
+                "period": "Juin 2023 – Sep 2023",
+                "description": "Refonte de l'interface de la plateforme Wide, conversion des maquettes en composants React réutilisables avec Tailwind CSS, et développement d'une API REST Django pour les calculs et estimations immobilières."
             },
             {
-                "num": "03",
-                "category": "Application Mobile",
-                "title": "Kamioun App",
-                "description": "Developed features for the prominent Kamioun mobile application as a React Native developer."
+                "title": "Kamioun — Tableau de bord opérationnel et microservice commandes",
+                "company": "Kamioun · Stage de fin d'études",
+                "period": "Fév 2025 – Juil 2025",
+                "description": "Conception d'un tableau de bord React pour le suivi des commandes, stocks et KPI, microservice Node.js/Express pour le traitement des commandes et la gestion des produits, et pipeline CI/CD Jenkins avec Docker."
             },
             {
-                "num": "04",
-                "category": "Tableau de Bord Interne",
-                "title": "Order Management System",
-                "description": "Built a comprehensive order management system to streamline operations for Kamioun."
+                "title": "Reactit — Tableaux de bord et bibliothèque de composants",
+                "company": "Reactit · Stage de fin d'études",
+                "period": "Fév 2022 – Juin 2022",
+                "description": "Tableaux de bord et bibliothèque de composants réutilisables avec React, Material UI et Redux, interfaces mobiles React Native et services backend Node.js/Express (utilisateurs, catégories, garanties, devis)."
             }
         ],
-        "sectionLabel": "04 — projets professionnels",
+        "sectionLabel": "03 — projets professionnels",
         "featured": {
             "label": "projet phare",
             "title": "Kamioun — Marketplace B2B Retail",
@@ -149,22 +149,19 @@
         }
     },
     "PersonalProject": {
+        "sectionLabel": "04 — projets personnels",
         "projects": [
             {
-                "name": "Coding Moon – Jeu de Combat 3D au Tour par Tour",
-                "description": "Un jeu de combat 3D au tour par tour sur navigateur utilisant React, Vite et Three.js. Système de combat avec collecte de pièces, attaques, points de vie et progression de niveau. Vainqueur du Coding Moon Challenge 2025."
+                "name": "Coding Moon – Jeu de combat 3D au tour par tour",
+                "description": "Jeu web 3D développé avec React et Vite : système de combat au tour par tour, gestion des points de vie, collecte de pièces et progression de niveaux. Vainqueur du Coding Moon Challenge 2025 – EPI."
             },
             {
-                "name": "Système de Demande de Prêt Amélioré",
-                "description": "Un microservice utilisant Spring Boot intégré à une API Django pour les calculs de prêts. Frontend réactif avec React, Redux Toolkit et Material-UI. Conteneurisé avec Docker et CI/CD avec Jenkins."
+                "name": "Plateforme E-Learning – Application d'enseignement en ligne",
+                "description": "Plateforme web d'enseignement développée avec Angular pour gérer et parcourir des contenus pédagogiques, interfaces responsives avec Bootstrap et Angular Material, backend Laravel."
             },
             {
-                "name": "Plateforme E-Learning – Application d'Enseignement en Ligne",
-                "description": "Plateforme web de gestion et de consultation de contenus pédagogiques, construite avec Angular et un backend Laravel. Interfaces responsives avec Bootstrap et Angular Material."
-            },
-            {
-                "name": "Calculateur Manorga – Estimateur de Toiture Solaire",
-                "description": "Application web utilisant React qui estime le nombre de panneaux solaires pouvant tenir sur le toit d'un utilisateur. Intégration de données météorologiques et de Google Maps."
+                "name": "Manorga – Estimateur de panneaux solaires",
+                "description": "Application React qui estime la capacité d'installation de panneaux solaires sur un toit à partir des données cartographiques Google Maps et météo."
             }
         ]
     },
@@ -184,11 +181,6 @@
             "email": "Email",
             "address": "adresse"
         }
-    },
-    "PersonalSection": {
-        "label": "projet personnel",
-        "title": "E-Citoyen — une plateforme e-gouvernement",
-        "description": "Développement d'interfaces web responsives avec React.js et Next.js, notifications en temps réel avec Socket.io et conception d'un système de files d'attente planifiées basé sur Redis."
     },
     "Footer": {
         "text": "© 2026 Sami Ayachi. Réalisé avec Next.js & three.js."

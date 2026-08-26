@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 
 const featuredConfig = {
@@ -20,48 +20,45 @@ const featuredConfig = {
     link: "https://kamioun.com/",
 };
 
+// Professional projects (from CV), in the same order as Work.projects translations
 const projectsConfig = [
     {
-        tags: ["React", "Vite", "Three.js", "JavaScript"],
+        tags: ["React", "Next.js", "Redux Saga", "Socket.io", "Express", "MongoDB", "Redis"],
+        image: "/assets/Project01/e-citoyen.png",
+        link: "https://e-citoyen.tn/",
+    },
+    {
+        tags: ["React", "Next.js", "Tailwind CSS", "Django", "Python"],
+        image: "/assets/Project02/wide.png",
+        link: "http://appflow.wide.tn:3001/",
+    },
+    {
+        tags: ["React", "Node.js", "Express", "MongoDB", "Docker", "Jenkins"],
         image: "/assets/Project01/dashboardLight.png",
-        link: "https://github.com/sami561",
+        link: "",
     },
     {
-        tags: [
-            "Spring Boot",
-            "Django",
-            "React",
-            "Redux Toolkit",
-            "Material UI",
-            "Docker",
-            "Jenkins",
-        ],
+        tags: ["React", "React Native", "Redux", "Material UI", "Node.js", "Express", "MongoDB"],
         image: "/assets/Project01/dashboard interface.png",
-        link: "https://github.com/sami561/Loan-Application-Repo.git",
-    },
-    {
-        tags: ["Angular", "TypeScript", "Laravel", "Bootstrap", "Angular Material"],
-        image: "/assets/Project01/add.png",
-        link: "https://github.com/sami561/e-learning-website.git",
-    },
-    {
-        tags: ["React", "Google Maps API", "Weather API"],
-        image: "/assets/manorga.png",
-        link: "https://github.com/sami561/calculator-manorga.git",
+        link: "",
     },
 ];
 
 const Work = () => {
     const t = useTranslations("Work");
     const tHome = useTranslations("HomePage");
-    const tPersonal = useTranslations("PersonalProject");
 
     const featuredBullets = t.raw("featured.bullets") as string[];
+    const projectTexts = t.raw("projects") as {
+        title: string;
+        company: string;
+        period: string;
+        description: string;
+    }[];
 
     const projects = projectsConfig.map((item, index) => ({
         ...item,
-        title: tPersonal(`projects.${index}.name`),
-        description: tPersonal(`projects.${index}.description`),
+        ...projectTexts[index],
     }));
 
     return (
@@ -117,6 +114,7 @@ const Work = () => {
                 </a>
             </div>
 
+            {/* Other professional projects */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7">
                 {projects.map((project, index) => (
                     <div
@@ -128,33 +126,37 @@ const Work = () => {
                                 src={project.image}
                                 alt={project.title}
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                             />
                             {project.link && (
                                 <a
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="Source code"
+                                    aria-label="Live project"
                                     className="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-background flex items-center justify-center text-foreground hover:text-accent transition-colors"
                                 >
-                                    <FaGithub size={16} />
+                                    <FiExternalLink size={16} />
                                 </a>
                             )}
                         </div>
-                        <div className="p-[26px] flex flex-col gap-3.5 flex-1">
+                        <div className="p-[26px] flex flex-col gap-3 flex-1">
+                            <div className="font-mono text-accent text-[12px]">
+                                {project.period}
+                            </div>
                             <div className="text-[19px] font-semibold leading-[1.3]">
                                 {project.title}
+                            </div>
+                            <div className="flex items-center gap-2 text-muted text-[13px]">
+                                <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-accent" />
+                                {project.company}
                             </div>
                             <div className="text-[14.5px] leading-[1.6] text-muted flex-1">
                                 {project.description}
                             </div>
                             <div className="flex flex-wrap gap-2 mt-1">
                                 {project.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="font-mono text-xs text-accent"
-                                    >
+                                    <span key={tag} className="font-mono text-xs text-accent">
                                         #{tag}
                                     </span>
                                 ))}
