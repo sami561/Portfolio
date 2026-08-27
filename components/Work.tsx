@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 
 const featuredConfig = {
@@ -126,30 +126,23 @@ const Work = () => {
                                 src={project.image}
                                 alt={project.title}
                                 fill
-                                className="object-cover object-top"
+                                className="object-cover"
                             />
                             {project.link && (
                                 <a
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="Live project"
+                                    aria-label="Source code"
                                     className="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-background flex items-center justify-center text-foreground hover:text-accent transition-colors"
                                 >
-                                    <FiExternalLink size={16} />
+                                    <FaGithub size={16} />
                                 </a>
                             )}
                         </div>
-                        <div className="p-[26px] flex flex-col gap-3 flex-1">
-                            <div className="font-mono text-accent text-[12px]">
-                                {project.period}
-                            </div>
+                        <div className="p-[26px] flex flex-col gap-3.5 flex-1">
                             <div className="text-[19px] font-semibold leading-[1.3]">
                                 {project.title}
-                            </div>
-                            <div className="flex items-center gap-2 text-muted text-[13px]">
-                                <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-accent" />
-                                {project.company}
                             </div>
                             <div className="text-[14.5px] leading-[1.6] text-muted flex-1">
                                 {project.description}
