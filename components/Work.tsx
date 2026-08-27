@@ -1,46 +1,39 @@
 "use client";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { BsArrowUpRight } from "react-icons/bs";
 import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 import { useTranslations } from "next-intl";
 
-const featuredConfig = {
-    tags: [
-        "React Native",
-        "Expo",
-        "TypeScript",
-        "Medusa v2",
-        "Mercur",
-        "Node.js",
-        "PostgreSQL",
-        "Magento",
-        "Firebase",
-        "Google Maps API",
-    ],
-    image: "/assets/kamioun.png",
-    link: "https://kamioun.com/",
-};
-
-// Professional projects (from CV), in the same order as Work.projects translations
+// Professional projects (from CV). Slides 1..4 follow the order of Work.projects translations;
+// slide 0 is the featured Kamioun marketplace (Work.featured translations).
 const projectsConfig = [
     {
-        tags: ["React", "Next.js", "Redux Saga", "Socket.io", "Express", "MongoDB", "Redis"],
+        stack: ["React Native", "Expo", "TypeScript", "Medusa v2", "Mercur", "Node.js", "Magento", "Firebase"],
+        image: "/assets/kamioun.png",
+        live: "https://kamioun.com/",
+    },
+    {
+        stack: ["React", "Next.js", "Redux Saga", "Socket.io", "Express", "MongoDB", "Redis"],
         image: "/assets/Project01/e-citoyen.png",
-        link: "https://e-citoyen.tn/",
+        live: "https://e-citoyen.tn/",
     },
     {
-        tags: ["React", "Next.js", "Tailwind CSS", "Django", "Python"],
+        stack: ["React", "Next.js", "Tailwind CSS", "Django", "Python"],
         image: "/assets/Project02/wide.png",
-        link: "http://appflow.wide.tn:3001/",
+        live: "http://appflow.wide.tn:3001/",
     },
     {
-        tags: ["React", "Node.js", "Express", "MongoDB", "Docker", "Jenkins"],
+        stack: ["React", "Node.js", "Express", "MongoDB", "Docker", "Jenkins"],
         image: "/assets/Project01/dashboardLight.png",
-        link: "",
+        live: "",
     },
     {
-        tags: ["React", "React Native", "Redux", "Material UI", "Node.js", "Express", "MongoDB"],
+        stack: ["React", "React Native", "Redux", "Material UI", "Node.js", "Express", "MongoDB"],
         image: "/assets/Project01/dashboard interface.png",
-        link: "",
+        live: "",
     },
 ];
 
@@ -48,7 +41,6 @@ const Work = () => {
     const t = useTranslations("Work");
     const tHome = useTranslations("HomePage");
 
-    const featuredBullets = t.raw("featured.bullets") as string[];
     const projectTexts = t.raw("projects") as {
         title: string;
         company: string;
@@ -56,114 +48,96 @@ const Work = () => {
         description: string;
     }[];
 
-    const projects = projectsConfig.map((item, index) => ({
-        ...item,
-        ...projectTexts[index],
-    }));
+    const projects = projectsConfig.map((item, index) => {
+        const text =
+            index === 0
+                ? {
+                      title: t("featured.title"),
+                      company: t("featured.role"),
+                      period: t("featured.duration"),
+                      description: t("featured.summary"),
+                  }
+                : projectTexts[index - 1];
+        return { ...item, ...text, num: String(index + 1).padStart(2, "0") };
+    });
+
+    const [project, setProject] = useState(projects[0]);
+    const handleSlideChange = (swiper: { activeIndex: number }) => {
+        setProject(projects[swiper.activeIndex]);
+    };
 
     return (
         <div>
             <div className="section-label">{t("sectionLabel")}</div>
             <h2 className="h2 mb-12">{tHome("workProjects")}</h2>
 
-            {/* Featured: Kamioun */}
-            <div className="card-surface rounded-[18px] overflow-hidden grid grid-cols-1 xl:grid-cols-[1.1fr_1fr] mb-10">
-                <div className="p-[26px] xl:p-10 flex flex-col gap-5 order-2 xl:order-none">
-                    <div className="font-mono text-accent text-xs tracking-[0.08em] uppercase">
-                        {t("featured.label")}
-                    </div>
-                    <div>
-                        <h3 className="text-[24px] xl:text-[28px] font-bold leading-[1.25] mb-2">
-                            {t("featured.title")}
-                        </h3>
-                        <div className="font-mono text-[13px] text-muted">
-                            {t("featured.role")} · {t("featured.duration")}
+            <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+                {/* Text side */}
+                <div className="w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+                    <div className="flex flex-col gap-6">
+                        <div className="font-mono text-accent text-[72px] xl:text-[96px] leading-none font-bold">
+                            {project.num}
                         </div>
-                    </div>
-                    <p className="text-[15.5px] leading-[1.65] text-muted">
-                        {t("featured.summary")}
-                    </p>
-                    <ul className="flex flex-col gap-2.5 text-[14.5px] leading-[1.6] text-muted">
-                        {featuredBullets.map((bullet, i) => (
-                            <li key={i} className="flex gap-3">
-                                <span className="mt-[9px] w-1.5 h-1.5 shrink-0 rounded-full bg-accent" />
-                                <span>{bullet}</span>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="flex flex-wrap gap-2 mt-1">
-                        {featuredConfig.tags.map((tag) => (
-                            <span key={tag} className="font-mono text-xs text-accent">
-                                #{tag}
-                            </span>
-                        ))}
+                        <h3 className="text-[28px] xl:text-[36px] font-bold leading-[1.15]">
+                            {project.title}
+                        </h3>
+                        <div className="flex items-center gap-2 font-mono text-[13px] text-muted">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                            {project.company} · {project.period}
+                        </div>
+                        <p className="text-base leading-[1.7] text-muted">
+                            {project.description}
+                        </p>
+                        <ul className="flex flex-wrap gap-x-2 font-mono text-sm text-accent">
+                            {project.stack.map((item, index) => (
+                                <li key={item}>
+                                    {item}
+                                    {index !== project.stack.length - 1 && ","}
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="border-t border-border" />
+                        {project.live && (
+                            <a
+                                href={project.live}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Live project"
+                                className="w-[60px] h-[60px] rounded-full card-surface flex items-center justify-center text-foreground hover:text-accent hover:border-accent transition-colors"
+                            >
+                                <BsArrowUpRight className="text-2xl" />
+                            </a>
+                        )}
                     </div>
                 </div>
-                <a
-                    href={featuredConfig.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative min-h-[260px] xl:min-h-full striped-placeholder order-1 xl:order-none"
-                >
-                    <Image
-                        src={featuredConfig.image}
-                        alt={t("featured.title")}
-                        fill
-                        className="object-cover"
-                    />
-                </a>
-            </div>
 
-            {/* Other professional projects */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7">
-                {projects.map((project, index) => (
-                    <div
-                        key={index}
-                        className="card-surface rounded-[18px] overflow-hidden flex flex-col"
+                {/* Slider side */}
+                <div className="w-full xl:w-1/2 order-1 xl:order-none mb-8 xl:mb-0">
+                    <Swiper
+                        spaceBetween={30}
+                        slidesPerView={1}
+                        className="xl:h-[520px] mb-12"
+                        onSlideChange={handleSlideChange}
                     >
-                        <div className="h-[180px] relative striped-placeholder">
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover object-top"
-                            />
-                            {project.link && (
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Live project"
-                                    className="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-background flex items-center justify-center text-foreground hover:text-accent transition-colors"
-                                >
-                                    <FiExternalLink size={16} />
-                                </a>
-                            )}
-                        </div>
-                        <div className="p-[26px] flex flex-col gap-3 flex-1">
-                            <div className="font-mono text-accent text-[12px]">
-                                {project.period}
-                            </div>
-                            <div className="text-[19px] font-semibold leading-[1.3]">
-                                {project.title}
-                            </div>
-                            <div className="flex items-center gap-2 text-muted text-[13px]">
-                                <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-accent" />
-                                {project.company}
-                            </div>
-                            <div className="text-[14.5px] leading-[1.6] text-muted flex-1">
-                                {project.description}
-                            </div>
-                            <div className="flex flex-wrap gap-2 mt-1">
-                                {project.tags.map((tag) => (
-                                    <span key={tag} className="font-mono text-xs text-accent">
-                                        #{tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                        {projects.map((item, index) => (
+                            <SwiperSlide key={index} className="w-full">
+                                <div className="h-[300px] sm:h-[460px] relative rounded-[18px] overflow-hidden card-surface striped-placeholder">
+                                    <Image
+                                        src={item.image}
+                                        fill
+                                        alt={item.title}
+                                        className="object-cover object-top"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                        <WorkSliderBtns
+                            containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                            btnStyles="bg-accent hover:bg-accent-hover text-accent-foreground text-[22px] w-[44px] h-[44px] flex justify-center items-center rounded-[10px] transition-colors"
+                            iconsStyles=""
+                        />
+                    </Swiper>
+                </div>
             </div>
         </div>
     );
